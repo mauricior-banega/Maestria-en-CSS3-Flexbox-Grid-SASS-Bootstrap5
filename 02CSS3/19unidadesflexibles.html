@@ -1,0 +1,44 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos se usan las Unidades de Medida flexibles (VIEWPORT) en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medidas flexibles</title>
+
+    <style>
+        /* Unidades flexibles 
+        -Viewport: Es el tamaño en referencia al tamaño de la pantalla en %, es su ancho y largo.
+        -Podemos usar otra propiedad ademas del vw/vh que es el vmin/vmax; que se adaptan hasta un maximo o hasta un minimo establecido (para ver el efecto modificar el viewport del navegador).
+        */
+
+        * {
+            margin: 0;
+            padding: 0; /* Quitamos todos los margenes que agrega el navegador por defecto */
+         }
+
+        div {
+            background: lightskyblue;
+
+            width: 50vw; /* Viewport Width */
+            height: 50vh; /* Viewport Height */
+        }
+
+        h1 {
+            /* font-size: 10vmin; */
+            font-size: 10vmax;
+        }
+      
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <h1>Hola mundo</h1>
+    
+</body>
+</html>

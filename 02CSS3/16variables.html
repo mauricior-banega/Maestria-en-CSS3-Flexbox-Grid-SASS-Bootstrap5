@@ -1,0 +1,116 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos como se aplican las Variables en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables en CSS3</title>
+
+    <style>
+
+        /* Las Variables sirven para simplificar declaraciones en codigo que repetimos muchas veces. En este caso aplicaremos una variable que simplifica la definicion de un color que se repite mucho en todo elarchivo. Se declara mediante :root */
+
+
+        :root {
+            --color-primario:#a73efd;
+            --color-secundario:#6f0883;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            background: var(--color-primario);
+        }
+
+        header h1 {
+            color: #FFF;
+            font-weight: 100;
+            font-size: 5em;
+            line-height: 300px;
+        }
+
+        div {
+            width: 300px;
+            border: 1px solid var(--color-primario);
+            margin: 30px;
+            padding: 30px;
+            float: left;
+        }
+
+        div h1 {
+            color: var(--color-primario);
+        }
+
+        p {
+            color: var(--color-secundario);
+        }
+
+        a {
+            display: inline-block;
+            width: 70%;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            background: var(--color-primario);
+        }
+
+        a:hover {
+            background:var(--color-secundario);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido</h1>
+    </header>
+
+    <div>
+        <h1>Hola mundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+        <a href="">Click aquí</a>
+    </div>
+
+    <div>
+        <h1>Hola mundo2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+        <a href="">Click aquí</a>
+    </div>
+
+    <div>
+        <h1>Hola mundo3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+        <a href="">Click aquí</a>
+    </div>
+    
+    <div>
+        <h1>Hola mundo4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+        <a href="">Click aquí</a>
+     </div>
+
+        <div>
+            <h1>Hola mundo5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+            <a href="">Click aquí</a>
+        </div>
+    
+        <div>
+            <h1>Hola mundo6</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facilis temporibus quos ipsa quis tempore soluta earum dolores nostrum unde. Beatae maxime eos enim consequuntur magni aliquam voluptas iusto! Nisi.</p>
+            <a href="">Click aquí</a>
+        </div>
+</body>
+</html>

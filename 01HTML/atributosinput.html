@@ -1,0 +1,60 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos distintos Atributos de Input en  HTML.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de inputs</title>
+</head>
+<body>
+    <h1>Atributos de inputs</h1>
+
+    <input type="text" name="nombre" autofocus placeholder="Ingresa nombre" tabindex="1">
+
+    <br><br>
+
+    <input type="text" autocomplete="off" tabindex="5">
+
+    <br><br>
+
+    <input type="text" spellcheck="false" tabindex="2">
+
+    <br><br>
+
+    <input type="text" value="Hola mundo" tabindex="4">
+
+    <br><br>
+
+    <input type="text" tabindex="3">
+
+    <br><br>
+
+    <input type="text" disabled>
+
+    
+<!--
+    Aclaraciones de cada atributo:
+    -autofocus: Determina que el input que lo tenga este seleccionado para ser completado por defecto 1°.
+    -tabindex: Indica elorden en el que se irán activando los inputs si le damos al tabulador.
+    -autocomplete: Permite que al escribir texto no muestre textos, abreviacion o alternativas, sino que solo lo autocomplete.
+    -spellcheck: Es un indicador de errores de ortografia (mediante una raya roja).
+    -value: Es el valor por defecto del input.
+    -disabled: Desabilitado
+-->
+
+    <hr>
+    <br>
+
+<select multiple> <!-- Permite seleccionar multiples opciones dentro del select (y no solo una de ellas) -->
+    <option value="">Elemento 1</option>
+    <option value="">Elemento 2</option>
+    <option value="">Elemento 3</option>
+</select>
+
+
+</body>
+</html>

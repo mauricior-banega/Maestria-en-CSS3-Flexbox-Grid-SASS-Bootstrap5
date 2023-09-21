@@ -1,0 +1,85 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos se usan las Funciones en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+
+    <style>
+        /* Funciones */
+
+        * {
+            margin: 0;
+            padding: 0; /* Quitamos todos los margenes que agrega el navegador por defecto */
+         }
+
+        .menu {
+            background: #000;
+            width: 100%;
+            height: 100px;
+        }
+
+
+        div.container {
+
+            background: blue;
+
+            width: 100%;
+            /* height: 100vh;  */
+
+            /* Funcion "calc": Permite calcular el atmaño de los elementos para que no desborden 
+        
+        -Como vemos en el ejemplo el div menu hace que desborde el conteiner a pesar de este tener un vh del 100%, esto es porque es cierto que ocupa todo el largo de la pantalla pero al agregarse un nuevo contendio y tener tamaño propio (aumenta) el tamaño de la pantalla tambien.
+        
+        -Por eso es que usando "calc" calculará este de cuanto tendrá que ser el vh para que se adapte. 
+        */
+
+            height: calc(100vh - 100px);
+
+
+            /* Funcion min: Tomará el valor de 200px siempre y cuando el 25% de mi contenedor padre sea mas grande que 200px */
+
+            /* width: min(200px, 25%); */
+
+
+
+
+            /* Funcion max */
+
+            /* width: max(300px, 25%); */
+
+
+
+
+            /* FUNCION CLAMP: Aplica las 2 reglas min y max juntas. */
+            width: clamp(100px, 25%, 300px);
+
+        }
+
+        h1::after {
+            
+            content:attr(data-nombre);
+        }
+
+        
+
+
+      
+    </style>
+</head>
+<body>
+
+    <!-- <div class="menu"></div>
+    
+    <div class="container"></div> -->
+
+    <h1 data-nombre=" Maria">Hola</h1>
+    <!-- Podemos tambien agregarle un atributo de cualquier nombre ej: data-nombre para que luego podamos desde el content añadirle mediante attr() ese atributo. Para que sea visible le añadimos after para que se muestre luego del h1 -->
+    
+</body>
+</html>

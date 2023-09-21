@@ -1,0 +1,65 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como se aplican las Pseudoclases en CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+
+    <style>
+    
+    /* Pseudoclases : 
+    -Son clases no definidas por mi pero si tienen los elementos HTML. Y se llaman mediante dos puntos :
+    */
+
+            /* Enlaces no visitados */
+            a:link {
+                color: orange;
+            }
+
+            /* Enlaces que si fueron visitados */
+            a:visited {
+                color: violet;
+            }
+
+            /* Input seleccionado */
+            input:focus {
+                background-color: red;
+            }
+
+            /* Pasar cursor encima de mis elementos */
+            a:hover {
+                color:red;
+                font-size: 20px;
+            }
+
+            /* Presudo clase de negacion */
+            p:not(.miparrafo) {
+                color:blue;
+            }
+
+            /* -Existen mas pseudoclases de los cuales pueden encontrarse por ej en https://developer.mozilla.org/*/
+        
+    </style>
+
+</head>
+<body>
+
+    <a href="#">Este es un enlace</a>
+    <input type="text">
+    <br><br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quod possimus laborum hic, error dolor aliquid consectetur expedita excepturi laboriosam asperiores labore a aut officiis porro ipsum magnam nam voluptate?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quod possimus laborum hic, error dolor aliquid consectetur expedita excepturi laboriosam asperiores labore a aut officiis porro ipsum magnam nam voluptate?</p>
+
+    <p class="miparrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quod possimus laborum hic, error dolor aliquid consectetur expedita excepturi laboriosam asperiores labore a aut officiis porro ipsum magnam nam voluptate?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quod possimus laborum hic, error dolor aliquid consectetur expedita excepturi laboriosam asperiores labore a aut officiis porro ipsum magnam nam voluptate?</p>
+
+</body>
+</html>

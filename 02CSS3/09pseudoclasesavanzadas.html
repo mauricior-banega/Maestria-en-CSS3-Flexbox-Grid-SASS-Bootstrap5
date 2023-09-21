@@ -1,0 +1,79 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como se aplican las Pseudoclases Avanzadas en CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases Avanzadas</title>
+
+    <style>
+    
+    /* Pseudoclases Avanzadas */
+
+            /* Primer elemento */
+            p:first-child {
+                color:blue;
+            }
+
+            /* Ultimo elemento */
+            p:last-child {
+                color:red;
+            }
+
+            /* N elemento */
+            p:nth-child(3) {
+                color:turquoise;
+            }
+
+            p:nth-last-child(3) { /* Realiza la tarea pero a la inversa, tomando como 1° elemento al último, osea de abajo hacia arriba en los parrafos. */
+
+                color:violet;
+            }
+
+
+
+            /* Elementos Pares -Aplicamos 2n o la palabra "even" */
+
+            /* Aclaracion: Comentar estos 3 ultimos para ver las propiedades aplicadas en los anteriores ejemplos. */
+
+            p:nth-child(2n) {
+                color:orange;
+            }
+
+            /* Elementos Impares -Aplicamos la palabra "odd" */
+            p:nth-child(odd) {
+                color:red;
+            }
+
+            /* Elementos N = Aplica a los elementos cada 3 posiciones y asi para n posiciones.*/
+            p:nth-child(3n) {
+                color:black;
+            }
+
+    /* -Existen mas pseudoclases de los cuales pueden encontrarse por ej en https://developer.mozilla.org/*/
+
+    </style>
+
+</head>
+<body>
+
+   <div class="contenedor">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laborum? Quas neque consectetur, autem nisi rerum veniam odit aut nesciunt.</p>
+   </div>
+   
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos validaciones de los inputs en  HTML.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones</title>
+</head>
+<body>
+    
+    <form action="">
+
+            <input type="text" required>
+
+            <br><br>
+
+            <input type="text" readonly value="Texto escrito por el usuario">
+
+            <br><br>
+
+            <input type="number" min="5" max="20" placeholder="5 al 20" title="Numeros del 5 al 20">
+
+            <br><br>
+
+            <input type="password" placeholder="Contraseña" minlength="5" maxlength="8">
+
+            <br><br>
+
+            <input type="text" pattern="[A-Z]{2}[0-9]{3}">
+
+            <br><br>
+
+            <input type="submit" value="Enviar">
+        
+<!--
+    Aclaraciones de cada atributo de validacion:
+    -required: Indica que este campo debe ser completado/llenado, sino al enviar (submit) el formulario este no lo hará hasta que lo esté.
+    -readonly: Indica que ese texto que tiene el value no se puede editar.
+    -min/max: Es un rango, de n° maximo y minimo.
+    -minlength/maxlength: No se puede pones mas o menos de esos limites en caracteres.
+    -pattern: Indica que deba ser ingresado un patrón especifico de caracteres, en este caso para [A-Z]{2}[0-9]{3}; se deba ingresar 2 letras y 3 números.
+-->
+
+<!-- Video 8 terminado, queda 9. Trabajar con Iconos -->
+
+    </form>
+
+</body>
+</html>

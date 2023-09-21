@@ -1,0 +1,86 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como se aplican la Metodologia BEM en CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia BEM</title>
+
+    <style>
+
+        /* BEM =
+            - B BLOCK .block
+            - E ELEMENT .block__item
+            - M MODIFIER .block-modifier
+
+        -Útil para proyectos grandes. Para proyectos chicos usar la de selectores descendientes por ejemplo.
+        
+        */
+
+        
+        /* Element */
+        .box__btn{
+            width: 100px;
+            height: 40px;
+            background: rgb(2, 68, 153) ;
+            border: none;
+            color: #FFF;
+        }
+        */
+
+        /* Block */
+        .box {
+            width: 200px;
+            background: lightskyblue;
+            padding: 40px;
+            margin: 20px;
+        }
+
+        /* Element */
+        .box__btn{
+            width: 100px;
+            height: 40px;
+            background: rgb(2, 68, 153) ;
+            border: none;
+            color: #FFF;
+        }
+
+        /* Modifier */
+        .box--btn{
+            background-color: red;
+        }
+
+        .btn--bgred {
+            background-color: rgb(134, 4, 4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolores, et quibusdam tempora modi eaque unde minima repellendus! Expedita molestias, aspernatur saepe rem inventore sunt velit dolores distinctio! Nobis.</p>
+        <button class="box__btn">Click aquí</button>
+    </div>
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolores, et quibusdam tempora modi eaque unde minima repellendus! Expedita molestias, aspernatur saepe rem inventore sunt velit dolores distinctio! Nobis.</p>
+        <button class="box__btn">Click aquí</button>
+    </div>
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolores, et quibusdam tempora modi eaque unde minima repellendus! Expedita molestias, aspernatur saepe rem inventore sunt velit dolores distinctio! Nobis.</p>
+        <button class="box__btn">Click aquí</button>
+    </div>
+
+    <section class="box box--btn">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolores, et quibusdam tempora modi eaque unde minima repellendus! Expedita molestias, aspernatur saepe rem inventore sunt velit dolores distinctio! Nobis.</p>
+        <button class="box__btn btn--bgred">Click aquí</button>
+    </section>
+
+
+</body>
+</html>

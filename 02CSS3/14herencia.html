@@ -1,0 +1,42 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos como se aplican Herencia en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia</title>
+
+    <style>
+        /* Herencia CSS 
+        -Podremos ver que da el color rojo a los parrafos, osea ellos heredan ese color asignado para body porque estan dentro de el, pero no asi el borde, ya que el 2| parrafo esta encerrado dentro de un div aparte que no tiene pintado de azul.
+        */
+
+        body {
+            color: red;
+            border: 1px solid blue;
+        }
+
+        /* inherit Hereda el valor que tiene la misma propiedad CSS en su elemento padre.
+            initial Establece el valor inicial que tenia la propiedad CSS inicialmente. 
+         */
+
+         div{
+            border: inherit; /* Entonces ahora si pinta de azul tmb la caja */
+
+            /*border: initial;  Entonces vuelve a su estado inicial, osea sin tener borde pintado, valor por defecto. */
+         }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquid sunt necessitatibus temporibus tenetur, ut dolor officiis deleniti tempora dolorem at placeat, rem soluta autem blanditiis iusto dolorum corrupti suscipit.</p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquid sunt necessitatibus temporibus tenetur, ut dolor officiis deleniti tempora dolorem at placeat, rem soluta autem blanditiis iusto dolorum corrupti suscipit.</p>
+    </div>
+</body>
+</html>

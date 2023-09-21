@@ -1,0 +1,26 @@
+
+Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy]
+
+-Aprende CSS3, Maquetación web, Responsive Web Design, SASS, LESS, Flexbox, CSS Grid, Bootstrap 4 y 5 desde cero +20h
+
+[Cursos por Mega]
+
+-----------------------------------------------------------------------------------------------------------------------
+
+1-Bajamos extensiones de VSC útiles: 
+
+-Spanish Language Pack for Visual Studio Code (sino tambien se puede cambiar desde la configuracion de VSC).
+
+-Live Server (ya instalado)
+
+-HTML CSS Support (permite mostrar en un listado todas las clases css vinculadas/pertenecientes a ese documento html para poder utilizarlas).
+
+-Sublime Text Keymap and Settings Importer (sive por si trabajaba en Sublime traer los atajos de ese compilador).
+
+-Google Fonts (permite buscar todas las fuentes que tiene Google y trabajar con ellas de forma mas rápida).
+
+-Better Comments (permite añadirle color a los comentarios).
+
+-Ayu (permite cambiar el tema de VSC). Si lo instalamos y vamos a Configuracion + Temas + Temas de color, apreceran los de Ayu y podremos cambiar y ver cual es el que mas nos gusta.
+
+-VSCode Great Icons (permite añadir iconos a los tipos de archivos). Yo ya tengo uno asique no lo bajo, pero si lo hiciese, puedo cambiarlo una vez bajado desde, Cofiguracion + Temas + Tema de icono de archivo.

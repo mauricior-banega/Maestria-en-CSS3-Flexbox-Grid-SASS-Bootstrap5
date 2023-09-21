@@ -1,0 +1,54 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos se usan las Unidades de Medida Relativas en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medidas Relativas</title>
+
+    <style>
+        /* Unidades de medida relativas */
+
+        :root {
+            font-size: 50px;
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+      
+        h1 {
+            /* REM: Relativo al contenedor abuelo o mayor que es el root (el maximo posible o por defecto en este caso modificado).*/
+            font-size: 3rem; 
+
+            /* EM: Relativo al padre, en este caso el padre no es root sino body porque es inmediata la relacion */
+            font-size: 2em; 
+
+            /* EX: Es la mitad del tamaño del predefinido por el navegador por defecto, osea mitad de 16px = 8.94px*/
+            font-size: 1ex;
+
+            /* CH: Toma el tamaño del ancho del 0*/
+            font-size: 1ch;
+        }
+
+        div {
+            background-color: blue;
+
+            /* Porcentaje */
+            width: 50%;
+            height: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <div></div>
+</body>
+</html>

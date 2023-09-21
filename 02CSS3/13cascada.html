@@ -1,0 +1,45 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos como se aplican los estilos en CASCADA en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - Cascada</title>
+
+    <style>
+        /* CSS CASCADA 
+        -Toma los elementos de arriba hacia abajo dando mayor importancia al de abajo. 
+        -Toma primero los elementos mas especificos.
+        -Se puede romper la regla con !important.
+        */
+
+        p {
+            color: blue;
+        }
+
+        /* p.miparrafo {
+            color: blue;
+        } */
+
+        /* p.miparrafo {
+            color: blue !important;
+        } */
+
+        p {
+            color: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p class="miparrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim perferendis, accusantium iusto maiores explicabo beatae illo esse officiis voluptatibus placeat asperiores ab facilis dolore, minima sunt! Laudantium, vero impedit.
+    </p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como se aplica un Selectores Hijos
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Hijos</title>
+
+    <style>
+        /* Selector Hijo */
+        .contenedor > div > h1 {
+            color: blue
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="contenedor"> <!-- Padre -->
+
+        <div> <!-- hijo -->
+            <h1>Titulo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet. Dolor, eos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet. Dolor, eos.</p>
+
+            <div> <!-- NO ES HIJO de contenedor, sino del propio div entonces no aplica -->
+                <h1>Titulo nuevo</h1>
+            </div>
+
+        </div>
+
+        <div> <!-- hijo -->
+            <h1>Titulo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet. Dolor, eos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet. Dolor, eos.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
