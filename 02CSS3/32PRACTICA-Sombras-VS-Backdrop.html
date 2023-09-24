@@ -1,0 +1,40 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -32. PRACTICA Sombras VS Backdrop
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras VS Backdrop</title>
+
+    <style>
+
+        body {
+            background: #42C0FB;
+            text-align: center;
+        }
+
+        /* Sombrea toda la caja div (y no el contenido) */
+        img {
+            margin: 100px 20px;
+        }
+
+        .logo {
+            box-shadow: 0 0 15px 10px #fff;
+        }
+
+        /* Sombrea el contenido; en este caso la img */
+        .logo2 {
+            filter: drop-shadow(0 0 15px #fff);
+        }
+
+    </style>
+</head>
+<body>
+    <img src="img/image3.png" alt="" class="logo">
+    <img src="img/image4.png" alt="" class="logo2">
+</body>
+</html>

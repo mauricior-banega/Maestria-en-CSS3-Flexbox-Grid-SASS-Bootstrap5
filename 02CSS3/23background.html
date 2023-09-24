@@ -1,0 +1,86 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos sobre como aplicar Background y diferentes propiedades de el en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+
+    <style>
+
+        div {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border: 1px solid #000;
+
+            /* Fondo plano */
+            background-color: #123456;
+            background: turquoise;
+
+            /* Gradiente */
+            background: linear-gradient(90deg, blue, orange);
+            background: radial-gradient(orange, red);
+
+            /* Imagen de fondo */
+            background-image: url(img/wallpaper.jpg);
+            background-repeat: no-repeat;
+
+            background-size: contain; 
+            /* La imagen aparece integralmente en la caja y es redimensionada proporcionalmente, al tamaño máximo: o bien es tan alta como la caja, o es tan ancha como la caja. */
+
+            background-size: cover; /* La imagen es redimensionada proporcionalmente y cubre toda la caja. Parte de la imagen puede no aparecer en pantalla.*/
+
+            background-position: center; /* Pero podemos hacer que quede mitad de alto y ancho, para que se vea correctamente si no es exactamente un cuadrado la img como el div y esto se hace centrandolo con "center". Daria a x/y center, pero podemos especificar 2 valores, uno para x e y. 
+            
+            Por ej: background-position: center left; 
+            */
+
+            background-attachment: fixed;
+            /* Hace que la imagen quede [fija] si scrolleamos */
+
+
+
+
+            /* [ REDUCIMOS CODIGO ] - Declarando varias propiedades anteriormente aplicadas dentro de la misma definicion/ en una sola lineas de código. Lo que no nos dejará incluir es el "cover" asique se pondrá aparte */
+
+            background: url(img/wallpaper.jpg) no-repeat fixed center;
+            background: cover;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, suscipit similique sint sit impedit exercitationem laborum? Voluptate provident nam blanditiis alias. Labore sequi est cum magnam, ullam rem enim quo placeat consequatur illo id ipsa reiciendis unde at, accusantium ducimus maiores! Quo quos laboriosam illo vel dicta asperiores iste eum.</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos más sobre Box Model, en especifico "Border" en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+
+    <style>
+
+        div {
+            
+            width: 200px;
+            height: 200px;
+            
+            /* Border */
+            border-width: 5px;
+            border-style: solid;
+            border-color: blue;
+
+            /* Aclaracion: Estas sentencias por separador no se estan usando mucho (estan siendo deprecadas, de todas formas explicamos lo sgte). Podemos poner mas de 1 propiedad en cada declaración, Ej:  
+            
+            border-width: 5px 2px 10px 20px;
+            border-style: solid dashed dotted double;
+            border-color: blue red violet green;
+            
+            Y aplicara los cambios pertenecientes a cada sentido respectivamente.
+            */
+            
+            /* Atajo */
+            border: 5px solid red; /* Simplificamos todo en la misma declaración */
+
+            /* Agregaremos bordes distintos en cada lado de forma simplificada: */
+
+            /* border-top: 10px solid blue; 
+            border-right: 5px dotted yellow; 
+            border-bottom: 10px solid blue; 
+            border-left: 15px dashed red;  */
+
+
+            /* Bordes Redondeados */
+
+            border-radius: 10px; /* Añade bordes a todas las esquinas */
+            border-radius: 20px 50px; /* EN DIRECCION X: 
+            -1° Valor: Afecta arriba a la izquierda y abajo a la derecha; 
+            -2° Valor: Afecta arriba a la derecha y abajo a la izquierda. */
+
+            border-radius: 20px 50px 80px; 
+            /* 
+            -1° Valor: Afecta arriba a la izquierda
+            -2° Valor: Afecta arriba derecha + abajo izquierda
+            -3° Valor: Afecta abajo derecha. */
+
+            border-radius: 20px 50px 80px 40px; 
+            /* Afecta con sentido agujas del reloj, partiendo desde arriba a la izquierda como 1° Valor */
+
+            /* Propiedades Detalladas */
+            border-top-left-radius: 80px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis a error quos facere quas nam repellat adipisci aliquid, earum deserunt itaque repudiandae sapiente voluptatum, cumque voluptates vero ipsam natus maxime?</p>
+    </div>
+</body>
+</html>

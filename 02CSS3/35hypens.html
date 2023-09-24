@@ -1,0 +1,44 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicamos sobre el uso de Hypens en nuestros textos de CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypens</title>
+
+    <style>
+
+/* Hypens o quiebre de palabra: Nos permite hace que entre, osea acomodar el texto dentro de un contenedor, para que no quede fuera. */
+
+        div {
+            width: 200px;
+            border: 1px solid #000;
+
+            /* Primera manera */
+            overflow-wrap: normal;
+            overflow-wrap: anywhere; 
+            overflow-wrap: break-word;
+
+            /* Segunda manera */
+            word-break: break-all; /* Corta la palabra */
+
+            /* Tercera manera */
+            hyphens: auto; /* Realiza el quiebre de palabra indicando mediante un guion. */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus repudiandae iste, delectus reprehenderit quod architecto ut eos blanditiis iusto cumque harum? Quisquam impedit explicabo laborum iusto voluptatum quae quis?
+            
+        </p>
+    </div>
+    
+</body>
+</html>

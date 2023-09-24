@@ -1,0 +1,57 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos sobre el uso de Blend Mode en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blend Mode</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100vw;
+            height: 100vh;
+
+            /* Estamos mandando a mostrar 2 imagenes al mismo tiempo, como no puede mostrar ambas es que solo muestra una. Para que si lo haga es que usamos "blen-mode"; es como una especie de filtros para aplicar y que asi se puedan visualizar ambos */
+            background: url(img/background1.jpg), url(img/background2.jpg), red;
+
+            background-size: cover;
+            background-position: center;
+
+
+            /* BLEND MODE */
+            /* -Con multiply; que es el mas conocido y usado para estos casos. Ademas le podemos añadir un color, en este caso: red. */
+
+            background-blend-mode: multiply;
+
+            /* Otros efectos: 
+            
+            -multiply
+            -screen
+            -overlay
+            -darken
+            -lighten
+            -color-dadge
+            -saturation
+            -color
+            -luminosity
+            -hue
+
+            */
+        }
+
+    </style>
+</head>
+<body>
+        <div></div>
+</body>
+</html>

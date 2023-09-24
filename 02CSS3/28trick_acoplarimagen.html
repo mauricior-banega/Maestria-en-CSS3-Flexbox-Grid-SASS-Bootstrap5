@@ -1,0 +1,48 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    - Veremos: CSS TRICK Nunca distorsiones tus imágenes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRICK</title>
+
+    <style>
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            margin: 100px auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover; /* CSS TRICK */
+
+            /* 
+            -Permite que la imagen se adapte correctamente al div que lo contiene y no mostrando la imagen complimida, similar a como sucede con cover en background-size. 
+            
+            -Podemos darle posiciones tambien por ej:
+            
+            object-posotion: top left; 
+            
+            */
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="img/wallpaper.jpg" alt="">
+    </div>
+    
+</body>
+</html>

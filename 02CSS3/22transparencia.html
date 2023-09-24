@@ -1,0 +1,51 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicaremos sobre la Transparencia de los colores en CSS3.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparencia</title>
+
+
+    <style>
+
+       /*  body {
+            background-color: red;
+        } */
+
+        div {
+            width: 500px;
+            height: 500px;
+
+            
+
+            /* Transparencia */
+
+            background-color: transparent;
+
+            background-color: #00000050; /* -Agregamos los 6 digitos del color heva pero si le damos 2 digitos más estaremos aplicamos transparencia */
+
+            background-color: rgba(0, 0, 0, 0.5);
+            /* La transparencia en rgba es canal alpha; aqui damos valores de 0.0 a 1 o el % */
+
+            background-color: hsla(125, 80%, 50%, 20%);
+            /* background-color: hsla(hue, saturation, lightness, alpha); */
+
+            background-color: red;
+
+
+            /* Opacity  */
+            opacity: 0.8; /* Pero acá aplica transparencia al fondo y al texto (a todo) y va desde 0 a 1. */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, ipsa dolorum iste at exercitationem deleniti saepe quam eligendi impedit. Assumenda nisi eveniet mollitia veniam et incidunt vitae rerum eos magnam.</p>
+    </div>
+</body>
+</html>

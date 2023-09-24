@@ -1,0 +1,73 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -26. PRACTICA Creando un efecto Paralax con CSS3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA - Paralax</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Permite el tamaño que las cajas que cree sean las que se especifiquen */
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .sec1 {
+            background: url(img/background4.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .sec2 {
+            background: url(img/background5.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .sec3 {
+            background: url(img/background6.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .sec4 {
+            background: url(img/background7.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        
+        /* Esta es la separacion entre las img */
+
+        .sec-text { 
+            width: 100%;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="sec1"></section>
+    <div class="sec-text"></div>
+    <section class="sec2"></section>
+    <div class="sec-text"></div>
+    <section class="sec3"></section>
+    <div class="sec-text"></div>
+    <section class="sec4"></section>
+</body>
+</html>

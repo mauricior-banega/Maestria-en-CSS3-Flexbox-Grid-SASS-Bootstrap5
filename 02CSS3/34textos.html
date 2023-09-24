@@ -1,0 +1,78 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos y explicamos los estilos de Texto en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos</title>
+
+    <style>
+
+        h1 {
+            /* Estilos de texto */
+            font-size: 70px;
+            font-weight: 600;
+            font-style: italic;
+            color: blue;
+
+            /* Espaciado de letras */
+            letter-spacing: 10px;
+
+            /* Espaciado de palabras */
+            word-spacing: 20px;
+
+            /* Interlineado (pero en el h1 no se ve el efecto) */
+            line-height: 50px;
+
+            /* Sangria */
+            text-indent: 100px;
+
+            /* Borde de texto: Relleno y borde (propiedades nuevas) */
+            -webkit-text-fill-color: crimson; 
+            -webkit-text-stroke: 5px black;
+
+            /* Alinear texto */
+            text-align: start;
+            text-align: end;
+            text-align: center;
+            text-align: justify;
+
+            /* Transformar texto */
+            text-transform: uppercase; /* Todo mayuscula */
+            text-transform: lowercase; /* Todo minuscula */
+            text-transform: capitalize; /* 1° letra de cada palabra en mayuscula */
+
+        }
+
+            /* Primera linea de mi parrafo */
+
+            p::first-line {
+                color: red;
+            }
+
+            /* Primera letra de mi parrafo */
+            p::first-letter {
+                font-size: 50px;
+                color: green;
+            }
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ea repellat. Amet, corporis! Unde consequuntur nemo reiciendis laboriosam exercitationem voluptates culpa ipsa sequi odit minus quas amet fugit nostrum, est consequatur enim assumenda explicabo aperiam dolorum repellat, iure doloribus blanditiis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ea repellat. Amet, corporis! Unde consequuntur nemo reiciendis laboriosam exercitationem voluptates culpa ipsa sequi odit minus quas amet fugit nostrum, est consequatur enim assumenda explicabo aperiam dolorum repellat, iure doloribus blanditiis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ea repellat. Amet, corporis! Unde consequuntur nemo reiciendis laboriosam exercitationem voluptates culpa ipsa sequi odit minus quas amet fugit nostrum, est consequatur enim assumenda explicabo aperiam dolorum repellat, iure doloribus blanditiis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ea repellat. Amet, corporis! Unde consequuntur nemo reiciendis laboriosam exercitationem voluptates culpa ipsa sequi odit minus quas amet fugit nostrum, est consequatur enim assumenda explicabo aperiam dolorum repellat, iure doloribus blanditiis!
+    </p>
+</body>
+</html>

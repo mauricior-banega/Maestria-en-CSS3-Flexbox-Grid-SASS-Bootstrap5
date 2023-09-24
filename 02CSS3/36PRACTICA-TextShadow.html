@@ -1,0 +1,53 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    36. PRACTICA Text Shadow en CSS3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow</title>
+
+    <!-- Creamos un efecto letrero luminoso agregando varias sombras en la misma declaracion; tambien propiedades al texto.-->
+
+    <style>
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        h1 {
+            font-family: 'Open Sans';
+            text-align: center; /* Centrar en x (al medio de la caja)*/
+            line-height: 100vh; /* Centrar en y (todo el alto de la caja)*/
+            color: #222;
+            margin: 0;
+            font-size: 7em;
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        h1:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #fff,
+                         0 0 20px #fff,
+                         0 0 40px #ff0000,
+                         0 0 80px #fff,
+                         0 0 120px #fff;
+
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Abierto 24h</h1>
+</body>
+</html>
+
