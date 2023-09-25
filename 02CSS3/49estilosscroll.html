@@ -1,0 +1,111 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar el los estilos personalizados en los Scroll de CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Scroll</title>
+
+    <!-- Agregaremos estilos a la barra de Scroll, tanto para la barra de la caja "Barra de Scroll" como al scroll de la ventana del navegador. -->
+
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f2f2f2;
+        font-family: 'Open Sans';
+    }
+
+    .contenedor {
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 4px;
+        overflow: auto;
+    }
+
+    .contenedor h1 {
+        font-size: 38px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .contenedor hr {
+        background: #00a2ff;
+        width: 20%;
+        height: 5px;
+        border: none;
+        margin: 20px 0;
+        border-radius: 50px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: 28px;
+        font-size: 16px;
+        color: #414141;
+    }
+
+
+
+    /* ESTILOS A SCROLL BAR */
+
+    /* EDITAMOS BARRA DEL BODY (NAVEGADOR) */
+
+        /* Fondo de la barra de Scroll:
+        -Accedemos al elemento que contiene la barra a editar que es en este caso el "body". */
+
+        body::-webkit-scrollbar {
+            
+            width: 10px;
+            background: rgba(128, 128, 128, 0.5);
+        }
+
+        /* La barra del Scroll*/
+        body::-webkit-scrollbar-thumb {
+
+            background: rgba(41, 41, 41, 0.5);
+        }
+
+    /* EDITAMOS BARRA DEL LA CAJA (BARRA DE SCROLL) */
+    /* -Accedemos al elemento que contiene la barra a editar que es en este caso es el de la clase .contenedor y aplicamos las mismas propiedades -webkit- para el fondo y la barra. */
+
+    .contenedor::-webkit-scrollbar {
+             width: 7px;
+    }
+
+    .contenedor::-webkit-scrollbar-thumb {
+            background: #00a2ff;
+            border-radius: 5px;
+    }
+
+
+</style>
+
+<body>
+    <div class="contenedor">
+        <h1>Barra de Scroll</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores expedita fugit repellendus ipsa voluptatum vel totam consectetur quidem quibusdam est repudiandae amet, cum inventore? Alias quidem ratione quisquam obcaecati quasi?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate dicta, repellendus perferendis temporibus eligendi error voluptates commodi deserunt ex facere mollitia et aut, ab quas cumque voluptatum eveniet consequatur officiis omnis enim. Dolor consequuntur, iure deserunt ratione ipsam facilis, consectetur labore temporibus laudantium repellendus aliquam eaque. Quasi atque porro veritatis fugiat ipsa repellendus saepe maxime totam praesentium facere magni eligendi doloribus quos, odio rerum ratione dolor quisquam hic iure nemo, ad reiciendis officia. Illum ut in, earum ipsam minus natus voluptate mollitia vitae sapiente alias non aliquid praesentium delectus nisi qui neque soluta fuga harum? Saepe totam quam sit molestias minus perferendis asperiores quod velit omnis cupiditate facere nisi numquam ad, unde voluptatum, veniam voluptates at dicta quo ullam, voluptas tenetur. Ducimus doloremque delectus earum sunt iste expedita in nam eius. Dolor hic explicabo delectus. Ex minus exercitationem quas voluptatem explicabo architecto quos, obcaecati praesentium, corporis fuga voluptas esse repellendus tempora sapiente repellat. Commodi molestiae doloribus laudantium sint labore, nihil mollitia numquam reiciendis eaque iste quia deleniti optio at vitae! Adipisci delectus enim nihil hic nulla, dicta consectetur aperiam odio dignissimos dolor neque soluta iure repellat sit tenetur iusto eum repellendus cupiditate sapiente, voluptas ad distinctio optio? Laborum, dolore?</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi, voluptates sapiente vel eaque voluptas, ab ipsam neque tenetur atque, quod sint omnis. Corporis distinctio quasi neque omnis? Exercitationem, veritatis fuga natus, id delectus quisquam ipsam ex et quod eum quibusdam accusantium. Illum suscipit explicabo voluptatum iure inventore maiores repellat culpa. Eius quos illo nam natus optio deleniti sed possimus earum recusandae odio in corrupti illum doloribus, minima aliquid. Natus nostrum blanditiis reprehenderit rerum cum recusandae culpa autem voluptate? Temporibus quasi assumenda consectetur unde ratione iusto accusamus! Quisquam atque ab voluptas nihil distinctio repellendus maxime asperiores? Aut est dignissimos quisquam natus magni sunt perferendis nam blanditiis, recusandae tenetur doloribus molestiae nostrum quas a accusamus id cupiditate amet quasi, praesentium tempora corporis? Minima exercitationem nisi ducimus, porro obcaecati expedita, tempore magnam officia velit praesentium dignissimos minus ratione accusamus? Debitis similique expedita quis quisquam tempora aliquid facere molestias animi perspiciatis eum totam eius magni recusandae fugit, omnis ad saepe? Consequuntur error, mollitia qui iure praesentium optio amet? Enim harum molestiae explicabo maxime itaque architecto vero rem culpa vitae dolor nesciunt repellat laudantium quod aspernatur assumenda magnam, quae deleniti facilis. Exercitationem sapiente natus, aliquid, incidunt ipsam accusantium pariatur modi ipsum, architecto libero consequuntur perspiciatis! Perferendis quibusdam doloribus nam nihil eius reprehenderit explicabo nulla quas quia, quae eligendi sit consequuntur earum maxime dicta. Eaque quod praesentium a ullam veritatis vero quidem nulla illo unde, aliquid natus, voluptatum minus eius rem laudantium quia? Quam pariatur deleniti, repellendus quidem porro, praesentium libero perferendis autem excepturi ut nihil esse eius provident voluptates iusto vero! Neque dignissimos dolor possimus ipsa culpa id asperiores placeat deleniti mollitia quas rem itaque non sit, assumenda, corrupti quo animi eum. Accusamus dolore quo placeat consectetur commodi perferendis nihil, ea minima id pariatur veritatis error. Quidem, maiores similique impedit distinctio dolor blanditiis consequatur odit laboriosam modi sapiente laborum id ab nostrum ducimus dignissimos in eius esse, beatae, provident debitis suscipit? Quibusdam, consequatur? Enim expedita distinctio incidunt iste porro natus dolores praesentium ab hic magnam quos beatae quisquam sed dignissimos aut, eum deleniti, possimus ullam unde tempora. Facere sequi autem architecto! Quam aliquid pariatur explicabo laboriosam optio qui harum adipisci ut quisquam facilis itaque, iste laborum, deserunt eum dolor accusantium inventore rem ipsum sapiente quasi porro. Mollitia, doloribus aut optio earum laborum quaerat corporis autem ipsum, itaque, quia nostrum nihil libero temporibus dignissimos suscipit voluptatem incidunt corrupti maxime. Quis rerum eius quia pariatur nisi.
+
+    </p>
+</body>
+</html>

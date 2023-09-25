@@ -1,0 +1,49 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabaja el "Overflow" (para evitar el desbordamiento) en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbordamiento (Overflow)</title>
+
+    <!-- Desbordamiento (Overflow): Su uso corrige errores de desbordamiento en general. -->
+
+    <style>
+
+        #desbordamiento {
+            width: 250px;
+            height: 250px;
+            background-color: #ffdb39;
+            padding: 20px;
+
+            /* DESBORDAMIENTO */
+
+            overflow: hidden;
+
+            /* En este caso el texto sobresale de la caja y con esta propiedad corrige ese problema cortando el texto y no muestra lo que sigue (prop:hidden). Pero hay otras formas tambien de usar, explicamos. */
+
+            overflow: visible; /* Valor por defecto, es decir muestra el desbordamiento en este caso. */
+
+            overflow: scroll; /* Oculta el archivo pero lo muestra creando un scroll para visualizarlo todo. Algo negativo; es que si no exediera, igual crea las barras del "scroll" y no queda bien. */
+
+            overflow: auto; /* La mejor opcion es esta, donde automaticamente interpreta si desborda o no, creando o no el scroll respectivaemnte. */
+
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="desbordamiento">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et impedit animi ducimus dignissimos rem perferendis vero, eius omnis ut quaerat optio voluptatibus iusto iste nisi?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et impedit animi ducimus dignissimos rem perferendis vero, eius omnis ut quaerat optio voluptatibus iusto iste nisi?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et impedit animi ducimus dignissimos rem perferendis vero, eius omnis ut quaerat optio voluptatibus iusto iste nisi?</p>
+    </div>
+</body>
+</html>

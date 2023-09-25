@@ -1,0 +1,46 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar el Desbordamiento de texto en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbordamiento de Texto</title>
+
+    <style>
+
+        h1 {
+            width: 300px;
+
+            /* PRIMERA FORMA */
+
+            white-space: nowrap; /* Coloca todo el contenido en una misma linea. */
+            overflow: hidden; /* Oculta el contendo desbordante */
+            text-overflow: ellipsis; /* Coloca los (...) si desborda */
+        }
+
+        h2 {
+            width: 300px;
+
+            /* SEGUNDA FORMA */
+
+            /* Método experimiental (no soportada por todos los navegadores)
+            -Funciona con las 4 declaraciones sino no
+            -Permite acortar, darle sentido y ocultar apartir de x n° de linea. */
+            
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolore voluptas amet non distinctio adipisci commodi odit, nam illo cupiditate.</h1>
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolore voluptas amet non distinctio adipisci commodi odit, nam illo cupiditate.</h2>
+</body>
+</html>

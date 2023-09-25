@@ -1,0 +1,43 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabaja el "Box Sizing" en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+    <!-- Box Sizing: Permite trabajar mucho mejor con los tamaños de los contenedores. -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Esta linea indica que todos los contenedores tengan el tamaño que se especifique unicamente. */
+        }
+
+        div {
+
+            background-color: #0090c9;
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+
+            /* Caso: Tenemos un width del 100% es decir ocupará todo el ancho, pero luego le damos un padding de 20px. Veremos que creará un scroll, osea sobrará porque asi lo interpreta el navegador.
+            
+            -Para que no suceda eso, es decir tenga ese padding pero no sobrepase el ancho asignado tenemos que declarar al setear nuestros elementos (*), un "box-sizing: border-box;".
+            */
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div></div>
+</body>
+</html>

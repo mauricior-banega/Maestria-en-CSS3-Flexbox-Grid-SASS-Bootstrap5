@@ -1,0 +1,16 @@
+/*
+    Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    CSS TRICK Normaliza tus estilos CSS
+
+    -Como ya pudimos ver, podemos setear todos los elementos mediante (*). Pero es recomendable directamente copiar Normalize a todos los proyectos desde su web https://necolas.github.io/normalize.css/ ya que estos estilos ya estan probados/testeados en todos los navegadores.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border_box;
+  }
+
+/* -Ya lo descargamos y guardamos el css en esta carpeta bajo el nombre: "normalize.css" y lo podremos usar ya directamente enlazando hacia ese archivo. */
+

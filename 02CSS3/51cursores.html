@@ -1,0 +1,73 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como modificar el "Cursor" con CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursores</title>
+
+    <style>
+
+        div {
+
+            width: 300px;
+            height: 300px;
+            background: turquoise;
+            margin: 50px auto;
+
+            /* Opciones del cursor */
+            cursor: none; /* Esconde el cursor, no se ve */
+            cursor: default; /* Cursor por defecto */
+            cursor: pointer; /* Cursor para click (mano o hand) */
+            cursor: progress; /* Cursor de progreso o carga con el pointer, ambos.*/
+            cursor: wait; /* Cursor de carga (circulo solo) */
+            cursor: cell; /* Cursor forma de cruz (simil Excel) */
+            cursor: alias; /* Cursor con otra flecha mas chica */
+            cursor: no-drop; /* Cursor que indica no seleccion (forma STOP) */
+            cursor: not-allowed; /* Cursor idem al de arriba */
+            cursor: grab; /* Cursor para click (mano o hand) para desplazamiento */
+            cursor: grabbing; /* Cursor para click (mano o hand cerrada) para desplazamiento, que indique que ya tomo/seleccionó */
+
+            /* Cursor Texto */
+            cursor: text; /* Indica seleccion de texto horiz */
+            cursor: vertical-text; /* Indica seleccion de texto vertical */
+
+            /* Resize (Cambiar tamaños) */
+            cursor: crosshair; /* Indica la cruz tipica de modificar tamaños */
+            cursor: ew-resize; /* Muestra flecha izq-der para modificar anchuras*/
+            cursor: n-resize; /* Muestra flecha arriba-abajo para modificar alturas */
+            cursor: nesw-resize; /* Muestra flechas en diagonal para modificar los angulos  de izq a der*/
+            cursor: nwse-resize; /* Muestra flecha arriba-abajo para modificar alturas de der a izq*/
+            cursor: all-scroll; /* Cruz que indica mover elemento en cualquier direccion */
+            cursor: move; /* Simil al de arriba (cruz) */
+            cursor: row-resize; /* Editar filas */
+            cursor: col-resize; /* Editar columnas */
+
+
+
+            /* Zoom */
+            cursor: zoom-in; /* Indica hacer zoom + */
+            cursor: zoom-out; /* Indica hacer zoom - */
+
+
+            /* Cursor Personalizado 
+            -Hacemos de una imagen un cursor pasandole la url
+
+            */
+
+            cursor: url(img/cursor.png), auto;
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

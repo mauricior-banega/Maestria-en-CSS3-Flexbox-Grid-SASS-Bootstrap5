@@ -1,0 +1,45 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajamos el Contorno (Outline), propiedad muy similar a como trabajabamos los "Bordes" en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contorno (Outline)</title>
+
+    <style>
+
+        .box {
+            text-align: center;
+            margin: 200px auto;
+        }
+
+        input, a, button {
+            outline-color: blue;
+            outline-style: solid;
+            outline-width: 2px;
+
+            /* Atajo */
+            outline: 1px solid red;
+
+            /* Sino queremos que tenga ese outline, esa linea externa */
+            outline: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <a href="#">Hola mundo</a>
+        <button>Click aquí</button>
+    </div>
+</body>
+</html>

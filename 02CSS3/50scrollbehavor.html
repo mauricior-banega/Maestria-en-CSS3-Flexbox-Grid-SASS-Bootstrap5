@@ -1,0 +1,109 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Seguimos trabajando con los estilos de Scroll, veremos como trabajar Scroll Behavior (scrolleo mas suave) en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Behavior (Scrolleo Suave)</title>
+
+    <!-- 
+        -Veremos 4 opciones de Articulos en el nav, donde al selecionar alguna de ellas se busca un desplazamiento hasta el articulo en detalle que esta debajo, pero con un efecto suave y no abrupto. 
+        -Ese efecto se declara dentro de la etiqueta html y es "scroll-behavior"; con el valor "smooth".
+    -->
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    html {
+        scroll-behavior:smooth;
+    }
+
+    nav {
+        width: 100%;
+        height: 50px;
+        background: #400a96;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 80px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    article {
+        width: 500px;
+        margin: 100px auto;
+        padding: 20px;
+        border: 3px solid #400a967a;
+        border-radius: 10px;
+    }
+
+    article h1 {
+        font-size: 45px;
+    }
+
+    article p {
+        line-height: 27px;
+        font-size: 18px;
+    }
+
+    article button {
+        width: 150px;
+        height: 40px;
+        margin: 20px 0;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#art1">Articulo 1</a>
+        <a href="#art2">Articulo 2</a>
+        <a href="#art3">Articulo 3</a>
+        <a href="#art4">Articulo 4</a>
+    </nav>
+
+    <article id="art1">
+        <h1>Mi titulo 1</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, dolores! Delectus fugit dicta iste inventore, ex nam eum itaque sint omnis? Eligendi aperiam esse autem.</p>
+        <button>Click aquí</button>
+    </article>
+
+    <article id="art2">
+        <h1>Mi titulo 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, dolores! Delectus fugit dicta iste inventore, ex nam eum itaque sint omnis? Eligendi aperiam esse autem.</p>
+        <button>Click aquí</button>
+    </article>
+
+    <article id="art3">
+        <h1>Mi titulo 3</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, dolores! Delectus fugit dicta iste inventore, ex nam eum itaque sint omnis? Eligendi aperiam esse autem.</p>
+        <button>Click aquí</button>
+    </article>
+
+    <article id="art4">
+        <h1>Mi titulo 4</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, dolores! Delectus fugit dicta iste inventore, ex nam eum itaque sint omnis? Eligendi aperiam esse autem.</p>
+        <button>Click aquí</button>
+    </article>
+</body>
+</html>
+
