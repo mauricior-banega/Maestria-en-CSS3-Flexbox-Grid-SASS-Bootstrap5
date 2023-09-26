@@ -1,0 +1,40 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con el Origen de una Transformacion  "transform-origin"; en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=.shape, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .shape {
+            background: #0aec42;
+            width: 150px;
+            height: 150px;
+            margin: 100px auto;
+            transition: all 2s;
+        }
+
+        .shape:hover {
+            transform: rotate(360deg);
+        }
+
+        .s2 {
+            background: #e6810f;
+
+            /* Indica desde donde va a comenzar a realizar la transformacion, esto hace que se desplaze a la izq en este caso para girar. */
+            
+            transform-origin: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="shape"></div>
+    <div class="shape s2"></div>
+</body>
+</html>

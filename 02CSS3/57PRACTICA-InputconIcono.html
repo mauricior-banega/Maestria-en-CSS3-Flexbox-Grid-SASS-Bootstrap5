@@ -1,0 +1,62 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    59. PRACTICA Input con icono (aplicando absolute/relative)
+
+    -Añadimos un icono de Font Awesome dentro del input
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icono dentro del Input</title>
+
+    <!-- Crearemos un input donde dentro contendrá una icono de lupa (search). Usaremos posocion absolute/relative para ubicarlo y padding para que no tape al icono al escribir (padding-left). -->
+
+    <!-- <link rel="stylesheet" href="fonts/fontawesome/css/all.css"> 
+    
+    -No funciona de forma local, asique cargo la CDN-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    
+    <style>
+
+        body {
+            background: #1c7fbd;
+        }
+
+        div {
+            width: 20%;
+            margin: 200px auto;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #dedede;
+            border-radius: 5px;
+            padding-left: 50px;
+        }
+
+        i {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: #1c7fbd;;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div>
+        <input type="text">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+</body>
+</html>

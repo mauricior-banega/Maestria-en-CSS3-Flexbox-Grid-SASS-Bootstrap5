@@ -1,0 +1,58 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con "Display" con CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: turquoise;
+            margin: 10px;
+            border: 1px solid #000;
+
+            /* Valor por defecto del display (Acomoda en vertical, uno debajo del otro) */
+            display: block;
+
+            /* Acomoda en horizontal o despliegue en linea, pero ingora el width/heigth */
+            display: inline;
+
+            /* Acomoda en horizontal o despliegue en linea, pero NO ingora el width/heigth, es decir respeta el tamaño asignado al div */
+            display: inline-block;
+
+            /* Crea una lista, crea los puntos típicos de las listas */
+            display: list-item;
+
+            /* Actua como la celda de una tabla. Es el comportamiento de etiquetas como <th> o <td> osea Columnar (Column) */
+            display: table-cell;
+
+            /* Actua como la celda de una tabla. Es el comportamiento de etiquetas como <tr> osea Fila (Row) */
+            display: table-row;
+
+
+            /* Ocultar elementos */
+
+            /* display: none; */ /* Oculta el elemento SIN MANTENER SU ESPACIO */
+
+            /* visibility: hidden; */ /* Oculta el elemento MANTENIENDO SU ESPACIO */
+        }
+
+    </style>
+</head>
+<body>
+    <div>Elemento #1</div>
+    <div>Elemento #2</div>
+    <!-- <div>Elemento #3</div> -->
+    <div style="visibility: hidden;">Elemento #3</div>
+    <div>Elemento #4</div>
+    
+</body>
+</html>

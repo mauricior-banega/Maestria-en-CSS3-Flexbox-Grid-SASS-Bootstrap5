@@ -1,0 +1,49 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con "Position: Absolute" (Posicionamiento Absoluto) con CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+
+    <style>
+
+        /* Posicionamiento "absolute": Los elementos se colocan en base al contenedor padre. Siempre y cuando ese contenedor padre tenga position relative.
+        
+        Aclaracion: Si bien el absolute si le damos valores de posicion este se va a mover... lo correcto es que lo haga respecto a su contenedor declarando tambien la posicion relativa en el padre. Sino lo tuviese tomará desplazamiento en base al padre primaro, el body.*/
+
+        .contenedor {
+
+                    background: #979797;
+                    width: 600px;
+                    height: 600px;
+                    margin: auto;
+                    
+                    position: relative;
+                }
+
+        div.box {
+                    background: violet;
+                    width: 200px;
+                    height: 200px;
+                    margin: 20px;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                }
+
+
+    </style>
+</head>
+<body>
+        <div class="contenedor">
+            <div class="box"></div>
+        </div>
+</body>
+</html>

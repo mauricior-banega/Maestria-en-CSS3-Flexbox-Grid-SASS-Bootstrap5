@@ -1,0 +1,73 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con Transformaciones en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones</title>
+
+    <!-- 
+        -Realiza cambios en los elementos como transladar/girar/rotar/deformar, entre otros. Esta propiedad viene de la mano con las transiciones (translate) dado que juntas crean el efecto en determinado tiempo y modo. 
+        
+        -Aplicaremos ambas para ejemplificar. 
+    -->
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            display: inline-block;
+        }
+
+        /* Mover o transladar */
+        #transladar {
+            background: #ed561a;
+            transform: translateX(-200px);
+            transform: translateY(300px);
+            transform: translate(0, 200px); /* Ambos ejes*/
+        }
+
+        /* Aumentar tamaño */
+        #escalar {
+            background: #8c00dd;
+            transition: all 0.5s;
+        }
+
+        #escalar:hover {
+            background: #8c00dd;
+            transform: scale(1.5);
+        }
+
+        /* Girar o rotar elementos */
+        #rotar {
+            background: #1aef9d;
+            transition: all 2s;
+        }
+
+        #rotar:hover {
+            
+            transform: rotate(150deg);
+        }
+
+        /* Deformar elementos */
+        #deformar {
+            background: #8db130;
+            transform: skew(50deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="transladar"></div>
+
+    <div id="escalar"></div>
+
+    <div id="rotar"></div>
+
+    <div id="deformar"></div>
+</body>
+</html>

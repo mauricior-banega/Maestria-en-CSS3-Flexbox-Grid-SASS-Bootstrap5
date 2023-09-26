@@ -1,0 +1,88 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con la Transformacion 3D en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 3D</title>
+
+    <!-- 
+        -Aplicaremos las transformaciones que hemos explicado aplicando un efecto de transformacion 3D a ellas. Veremos los elementos atravez de eje Z.
+
+    -Para que funcione correctamente debemos indicar la perspectiva (tamaño) en el elemento padre del elemento al que le aplicaremos el 3d, en este caso el padre de la caja box es el body directo.
+-->
+
+    <style>
+
+        body {
+            perspective: 700px;
+
+            /* La perspectiva es como nosotros observamos ese elemento, por defecto será mostrada como centrada, osea el ojo viendo la imagen centrada. Ahora si le damos un origen seria como si vieramos el elemento desde distintas posiciones por nosotros definidas. */
+
+            perspective-origin: center;
+        }
+
+        .box {
+            margin: 150px auto;
+            width: 300px;
+            height: 300px;
+            background: lightseagreen;
+            transition: all 5s;
+
+            /* Transformaciones en 3D */
+
+            /* ROTATE */
+
+            /* transform: rotateX(50deg);
+            transform: rotateY(50deg); */
+
+            /* transform: rotateZ(50deg); */
+
+
+
+            /* ATAJO */
+            /* transform: rotate3d(1,1,0, 70deg); */
+
+
+            /* TRANSLADAR */
+            /* transform: translateZ(300px);  */
+            
+            /* Estamos transladando el elemento en el eje Z, es decir ahora lo estamos acercando a nuestros ojos por asi decirlo, no es que se halla hecho mas grande, sino que la perspectiva es distinta al mostrarse. */
+
+            /* ATAJO */
+            /* transform: translate3d(100px,100px,300px);  */
+
+
+            /* SCALE */
+            /* transform: scaleZ(2) rotateX(50deg); */
+
+            transform: rotateY(90deg);
+            transform-style:preserve-3d ;
+
+        }
+
+
+        .content { /*  */
+           width: 300px;
+           height: 300px;
+           background: yellow;
+           margin: auto;
+           transform: rotateY(90deg); 
+        }
+
+        .box:hover {
+            transform: rotateY(360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+    </div>
+</body>
+</html>

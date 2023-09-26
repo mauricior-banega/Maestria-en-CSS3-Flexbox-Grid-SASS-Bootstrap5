@@ -1,0 +1,74 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    58. PRACTICA Posicionamiento Sticky
+
+    -Crearemos con sticky el efecto de que al scrollear podamos ver imagenes donde una quedará fija y la otra la superpondrá.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Sticky</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        section {
+
+            width: 100%;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            background-size: cover !important;
+            background-position: center center !important;
+
+            /* Le agregamos la sentencia !important sino no aplica a todos los section la propiedad. Hacemos esto para no repetir esa declaracion en cada seccion*/
+        }
+
+        section:nth-child(1) {
+            background: url(img/background1.jpg);            
+        }
+
+        section:nth-child(2) {
+            background: url(img/background2.jpg);          
+        }
+
+        section:nth-child(3) {
+            background: url(img/background3.jpg);
+          
+        }
+
+        section:nth-child(4) {
+            background: url(img/background4.jpg);
+        }
+
+        section:nth-child(5) {
+            background: url(img/background5.jpg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+</body>
+</html>

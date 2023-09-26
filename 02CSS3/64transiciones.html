@@ -1,0 +1,65 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    -Veremos como trabajar con Transiciones en CSS3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+
+    <!-- -Realiza cambios de los elementos HTML que especifiquemos, pasando el elemento/duracion/velocidad/retraso. 
+        
+        -Se usa de la mano con los "transform" que veremos en el proximo práctico. -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 70px;
+            display: inline-block;
+        }
+
+        .elemento1 {
+            background: #ed8b1a;
+        }
+
+        .elemento1:hover {
+            background: #ff3300;
+        }
+
+        .elemento1-transicion {
+
+            background: #00cedd;
+
+            /* Propiedades de transicion */
+
+            transition-property: background; /* Elemento a transicionar */
+            transition-duration: 1s; /* Duración */
+            transition-timing-function: linear; /* Velocidad o movimiento */
+            transition-delay: 1s;/* Retraso */
+
+                /* ATAJO */
+                transition: background 1s linear 1s;
+
+            /* Aclaración: Si queremos que aplique no solo a fondo sino a todos los elementos de la caja (si tuviera h1,p,img o modif tamaño de caja,etc) ponemos "all". 
+            -Estas transiciones deben de realizarse en las clases definidas que no tengan hover, ya que quitará el efecto cuando deje de hacerlo y no siempre. */
+        }
+
+        .elemento1-transicion:hover {
+            background: #001380;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="elemento1">
+    </div>
+
+    <div class="elemento1-transicion">
+    </div>
+
+</body>
+</html>
