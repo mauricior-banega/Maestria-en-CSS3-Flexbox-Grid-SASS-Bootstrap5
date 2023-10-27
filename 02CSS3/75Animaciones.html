@@ -1,0 +1,69 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    75. Animaciones
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+
+    <!-- 
+    -Utilizando transiciones y Clip-Path crearemos un boton que se anima pintando de un color a otro segun realizamos hover en el.
+     -->
+
+    <style>
+
+        /* PASO 1- PROPIEDADES DE ANIMACION */
+        /* 
+            - animation-name                --Nombre de la animacion
+            - animation-duration            --Duracion
+            - animation-timing-function     --Movimiento
+            - animation-delay               --Retraso
+            - animation-iteration-count     --Cantidad de veces que se repite
+            - animation-direction           --Direccion
+            - animation-fill-mode           -Que mostrara cuando termine
+            - animation-play-state          --Estado de reproduccion
+        */
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: gray;
+            margin: 50px 0;
+
+            /* Propiedades de mi animacion */
+            animation-name: changeColor;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 0.5s;
+            animation-iteration-count: 2;
+            animation-direction: alternate; /* Valores: normal/alternate(repite la animacion a la inversa)/reverse o alternate-reverse. */
+            animation-fill-mode: forwards; /* backwards: Vuelve al estado inicial antes de ser animado (color gris) al finalizar la animacion. Y fordwars deja el estado en el que quedo al llegar al 100% de la animacion. */
+            animation-play-state: running; /* Indica que se ejecute, o que no se ejecute y este pausada: paused. Esto se puede usar para que se active si le damos hover. */
+
+            /* Atajo de animación */
+            /* animation: chargeColor 5s linear infinite alternate running; */
+        }
+
+        /* PASO 2- CREAR MI ANIMACION */
+        @keyframes changeColor {
+            0% {transform: translateX(0);
+                background: blue;}
+            50% {transform: translateX(700px);
+                 background: orange;}
+            100% {transform: translateX(1000px);
+                  background: #000;}
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div></div>
+   
+</body>
+</html>
