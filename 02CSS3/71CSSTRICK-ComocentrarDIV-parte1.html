@@ -1,0 +1,56 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    71.CSS TRICK ¿Cómo centrar un DIV PARTE I
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRICK</title>
+
+    <!-- Veremos como CENTRAR el contenido dentro de un div, esto sin aplicar GRID/FLEXBOX. -->
+
+    <style>
+
+        div {
+            position: relative;
+            background: crimson;
+            color: #FFF;
+            width: 500px;
+            height: 500px;
+
+            /* margin: auto; */ /* TERCERA FORMA DE CENTRAR: Funciona solamente si existe un tamaño establecido, de ancho por ejemplo. */
+            margin: 50px auto;
+        }
+
+        h1 {
+
+            /* width: 50px; */
+
+            /* PRIMERA FORMA DE CENTRAR: Esto aplica/es funcional para una sola linea. Si esta sale de la caja no porque desborda */
+
+            /* text-align: center;
+            line-height: 500px; */
+
+            /* SEGUNDA FORMA DE CENTRAR  */
+
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+
+            /* TERCERA FORMA DE CENTRAR: En este caso no se centrará a menos que le demos un width al h1. Ya que ocupa todo el anmcho disponible */
+            /* margin: auto; */
+        }
+ 
+    </style>
+</head>
+<body>
+    <div>
+        <h1>¡Hola Mundo!</h1>
+    </div>
+</body>
+</html>
