@@ -1,0 +1,118 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    Seccion 4 - (Practicas CSS) 5. Efecto de fondo con rascacielos
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rascacielos</title>
+
+    <!-- 
+    -Dentro de un h1 "NEW YORK" agregaremos dentro 2 hileras de rascacielos en movimiento. Cabe alcarar que pueden ponerse entrellas, planetas, osea cualuiqer imagen que queramos animar.
+     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      body {
+        background: #262626;
+      }
+
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 35%;
+        padding: 20px;
+        text-transform: uppercase;
+        font-size: 8em;
+        text-align: center;
+        letter-spacing: 0.1em;
+        background: #72ceff;
+        color: #fff;
+        text-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      h1::before, h1::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all .5s;
+        animation: animate 10s linear infinite;
+        background-size: cover !important;
+      }
+
+/* -Acortamos codigo repetido
+
+    h1::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: url(img/skyline2.png);  Primera imagen de rascacielos 
+        background-size: cover;
+        z-index: -1;
+        transition: all .5s;
+        animation: animate 10s linear infinite;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: url(img/skyline.png);  Segundo imagen de rascacielos
+        background-size: cover;
+        z-index: -1;
+        transition: all .5s;
+        animation: animate 5s linear infinite;
+        
+      } */
+
+      h1::before {
+        background: url(img/skyline2.png);  
+        /* 1° Imagen de rascacielos*/
+      }
+
+      h1::after {
+        background: url(img/skyline1.png);  
+        /* 2° Imagen de rascacielos*/
+      }
+
+      h1:hover::before, 
+      h1:hover::after {
+        top: 0;
+      }
+
+      @keyframes animate {
+        0% { background-position: 0%;}
+        100% { background-position: 100%;}
+      }
+   
+    </style>
+</head>
+<body> 
+    <h1>New York</h1>
+</body>
+</html>

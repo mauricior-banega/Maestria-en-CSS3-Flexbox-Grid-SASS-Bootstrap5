@@ -1,0 +1,73 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+    Seccion 4 - (Practicas CSS) 4. Fondo de pantalla con efecto congelante
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Congelante</title>
+
+    <!-- 
+    -Aplicaremos a una imagen de fondo un efecto congelante que sobresalga de la imagen al dar hover.
+     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        background: url(img/image6.jpg);
+        background-position: center;
+        
+        transition: all 1s;
+      }
+
+      .box { /* Ubicamos al centro y superponemos la imagen en el mismo lugar que el fondo */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 650px;
+        height: 1050px;
+        background: url(img/image6.jpg);
+        background-position: center;
+        
+        z-index: 1;
+        transition: all 1s;
+      }
+
+      .box:hover { /* Damos sombra al hacer hover */
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      }
+
+      .box:hover ~ .bg { /* Difuminamos el fondo */
+        filter:blur(10px);
+      }
+
+
+
+    </style>
+</head>
+<body> 
+    <section>
+        <div class="box"></div>
+        <div class="bg"></div>
+    </section>
+</body>
+</html>
