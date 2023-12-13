@@ -1,0 +1,86 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 8 - CSS Flexbox ( contenedores flexibles
+
+1. Introducción a Flexbox
+2. Fundamentos de Flexbox
+3. Alineación de elementos
+4. Alineación de elementos multilinea
+5. CSS TRICK ¿Cómo centrar un DIV PARTE II
+6. Alineación individual
+7. Orden de elementos
+8. Flex basis,  Flex shrink, Flex Grow
+9. PRACTICA Crear un menú de navegación antes y después de Flexbox
+10. PRACTICA Jugamos y aprendemos con Flexbos Froggy
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Flex Basis/Shrink/Grow</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+
+          /* Flex Grow: Permite tener un crecimiento propiercional al n° fefinido de el, a lo largo osea en "row" (que esta por defecto), a un elemento que lo tenga definido. Crea el efecto de que crezca el elemento si aumentamos el tamaño de pantalla.
+            
+          Flex Shrink: Realiza lo contrario que "grow", se achica de acuerdo a la pantalla.
+
+
+             */
+          .flex-container{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .items:nth-child(1){
+              background: #21aef0;
+
+              /* Pueden definirse el comprotamiento de ambas propiedades los 2 al mismo tiempo y funcionaran al mismo tiempo tambien. */
+
+              flex-grow: 0;
+              flex-shrink: 0;
+          }
+
+          .items:nth-child(2){
+               background: #21f032;
+               flex-grow: 5;
+               flex-shrink: 10;
+          }
+
+          .items:nth-child(3){
+               background: #f08521;
+               flex-grow: 2;
+               flex-shrink:5;
+               flex-basis: 200px; /* Tamaño mínimo: Con esta prop definimos que si pueda crecer, achicarse tambien pero no menos de 200px, osea base.*/
+
+               /* ATAJO: Podemos definir todo en el mismo lugar; definiendo flex = grow + shrink + basis. */
+               
+               flex: 10 20 auto;
+
+          }
+
+          .items:nth-child(4){
+               background: #f02182;
+               flex-grow: 0;
+               flex-shrink: 0;
+          }
+
+
+     </style>
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items">1</div>
+          <div class="items">2</div>
+          <div class="items">3</div>
+          <div class="items">4</div>
+     </div>
+</body>
+</html>

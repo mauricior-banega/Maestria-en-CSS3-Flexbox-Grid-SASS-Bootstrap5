@@ -1,0 +1,63 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 8 - CSS Flexbox ( contenedores flexibles
+
+1. Introducción a Flexbox
+2. Fundamentos de Flexbox
+3. Alineación de elementos
+4. Alineación de elementos multilinea
+5. CSS TRICK ¿Cómo centrar un DIV PARTE II
+6. Alineación individual
+7. Orden de elementos
+8. Flex basis,  Flex shrink, Flex Grow
+9. PRACTICA Crear un menú de navegación antes y después de Flexbox
+10. PRACTICA Jugamos y aprendemos con Flexbos Froggy
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Alineacion -FlexBox</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+
+               display: flex;
+               flex-direction: row; 
+               
+               /* Podemos elegir que sea "row" o "column" como eje principal. Dependiendo de esto usando "justify-content" alineamos el principal establecido, en este caso "row" y usando "align-items" alineamos al secundario. Si tuvieramos como principal "column" seria lo mismo. */
+
+
+               /* APLICAR DIRECCION AL EJE PRINCIPAL Y SECUNDARIO */
+
+               /* Aplicar al eje principal */
+               justify-content: flex-start;
+               justify-content: flex-end;
+               justify-content: space-around;
+               justify-content: space-between;
+               justify-content: center;
+
+               /* Aplicar al eje secundario */
+               align-items: flex-start;
+               align-items: flex-end;
+               align-items: stretch;
+               align-items: center;
+
+          }
+     </style>
+
+
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items">1</div>
+          <div class="items">2</div>
+          <div class="items">3</div>
+     </div>
+</body>
+</html>

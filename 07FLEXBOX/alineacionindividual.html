@@ -1,0 +1,54 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 8 - CSS Flexbox ( contenedores flexibles
+
+1. Introducción a Flexbox
+2. Fundamentos de Flexbox
+3. Alineación de elementos
+4. Alineación de elementos multilinea
+5. CSS TRICK ¿Cómo centrar un DIV PARTE II
+6. Alineación individual
+7. Orden de elementos
+8. Flex basis,  Flex shrink, Flex Grow
+9. PRACTICA Crear un menú de navegación antes y después de Flexbox
+10. PRACTICA Jugamos y aprendemos con Flexbos Froggy
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Alineacion Individual</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+               /* Aplicando flexbox */
+               display: flex;
+               flex-flow: row nowrap;
+               justify-content: center;
+               align-items: center; 
+          }
+
+          /* ALINEACIONES ESPECIFICAS A ELEMENTOS HIJO -"align-self (self = en si mismo); realiza cambios que afectan al elemento en donde sea definido unicamente, aun asi si el elemento padre tiene definido otra alineacion, en este caso vertical (align-items: center).*/
+          .item2{
+               align-self: flex-start;
+               align-self: flex-end;
+               align-self: stretch; /* Acomple al ancho o largo completo del contenedor */
+               align-self: center;
+          }
+     </style>
+
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items item1">1</div>
+          <div class="items item2">2</div>
+          <div class="items item3">3</div>
+          <div class="items item4">4</div>
+     </div>
+</body>
+</html>

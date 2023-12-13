@@ -1,0 +1,67 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 8 - CSS Flexbox ( contenedores flexibles
+
+1. Introducción a Flexbox
+2. Fundamentos de Flexbox
+3. Alineación de elementos
+4. Alineación de elementos multilinea
+5. CSS TRICK ¿Cómo centrar un DIV PARTE II
+6. Alineación individual
+7. Orden de elementos
+8. Flex basis,  Flex shrink, Flex Grow
+9. PRACTICA Crear un menú de navegación antes y después de Flexbox
+10. PRACTICA Jugamos y aprendemos con Flexbos Froggy
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CSS TRICK</title>
+
+     <style>
+          .container{
+               width: 500px;
+               height: 500px;
+               background: crimson;
+               margin: 50px auto;
+               display: flex;
+
+          /* Recordando el los primeros practicos que alineabamos mediante transition -50% y dandole top/left en 0, ahora con Flexbox usando las sgtes propiedades podemos tambien hacerlo. De esta forma evitamos tener problemas usando Responsive. */
+               /* METODO 1 */
+               justify-content: center;
+               align-items: center;
+
+
+               /* METODO 2 (usado tambien en Grid Layout) */
+               place-items: center center;
+               place-content: center;
+
+              
+          }
+
+          .container div{
+               width: 100px;
+               height: 100px;
+               background: #222;
+          }
+
+
+
+     </style>
+
+
+</head>
+<body>
+     
+          
+     <div class="container">
+          <div></div>
+     </div>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 8 - CSS Flexbox ( contenedores flexibles
+
+1. Introducción a Flexbox
+2. Fundamentos de Flexbox
+3. Alineación de elementos
+4. Alineación de elementos multilinea
+5. CSS TRICK ¿Cómo centrar un DIV PARTE II
+6. Alineación individual
+7. Orden de elementos
+8. Flex basis,  Flex shrink, Flex Grow
+9. PRACTICA Crear un menú de navegación antes y después de Flexbox
+10. PRACTICA Jugamos y aprendemos con Flexbos Froggy
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+               display: flex;
+               flex-flow: row wrap;
+               
+
+               /* Alineacion multilinea: Este a diferencia al align-items es que modifica a toda la linea en este caso pero por separado cada una de ellas. Usando align-content modifica todas las lineas en conjunto. Como usamos row aplicará el cambio a todas las filas que tenga el viewport. */
+               
+               align-content: center;
+               align-content: flex-start;
+               align-content: flex-end;
+               align-content: space-around;
+               align-content: space-between;
+          }
+     </style>
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items">1</div>
+          <div class="items">2</div>
+          <div class="items">3</div>
+          <div class="items">4</div>
+          <div class="items">5</div>
+          <div class="items">6</div>
+          <div class="items">7</div>
+          <div class="items">8</div>
+          <div class="items">9</div>
+          <div class="items">10</div>
+     </div>
+</body>
+</html>
