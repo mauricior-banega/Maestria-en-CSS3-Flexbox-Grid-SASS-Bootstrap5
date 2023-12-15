@@ -1,0 +1,259 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 9 - Practicas FlexBox
+
+1. Menú lateral con tooltip
+2. App de lista de actividades
+3. Cards personales
+4. Galeria de cards con efecto hover
+5. Formulario de contacto con label flotante PARTE I
+6. Formulario de contacto con label flotante PARTE II
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tooltip</title>
+     <link rel="stylesheet" href="fontawesome/css/all.css">
+
+     <style>
+
+        * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+          }
+
+          .container {
+            background: #fff;
+            width: 350px;
+          }
+
+          h2 {
+            background: #03a9f4;
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 20px;
+          }
+
+
+
+          /* LISTA */
+
+          .list {
+            height: 500px;
+            overflow-y: auto; /* Esto activa el scroll de la lista, donde ahora no se aplica pero cuando crezca en tamaño si se podrá visualizar. */
+          }
+
+          /* Por ultimo; falta cambiarle el estilo a la barra de scroll. Aqui cambiamos el tamaño a mas chico. */
+          .list::-webkit-scrollbar {
+            width: 5px;
+          }
+
+           /* Y tambien cambiamos el color */
+           .list::-webkit-scrollbar-thumb {
+            background: #03a9f4;
+            border-radius: 40px;
+           }
+
+
+
+          /* ITEMS */
+          .item {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transition: all .5s;
+          }
+
+          .item:last-child {
+            border-bottom: none;
+          }
+
+          .item:hover {
+            background: rgba(0, 0, 0, 0.1);
+          }
+
+          .item label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+          }
+
+          .item p {
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 400;
+          }
+
+          .item span {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #8b8b8b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .item span::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            top:10px; /* Este le agregue yo para que quede mas en el centro el tilde */
+            border-left: 2px solid #8b8b8b;
+            border-bottom: 2px solid #8b8b8b;
+            transform: rotate(-45deg);
+          }
+
+
+
+          /* Por ante-ultimo de todo el práctico, veremos que queda la cajita del checked que no deseamos en este caso que se vea, para ello aplicamos estos cambios */
+          .item input {
+
+           /*  visibility: hidden;  -Una alternativa es esta, pero no la usamos ya que respeta el espacio que tenia la cajita, empujando el texto aún. Para ello usamos "display:none" que no respecta espacio y tambien oculta el check.*/
+
+           display: none;
+
+          }
+
+          /* ESTADOS */
+
+          /* De esta manera aplicando la prop checked osea activo el checkbox cambia prop de párrafo */
+          .item input:checked ~ p {
+            text-decoration: line-through;
+            color: #ccc;
+            font-weight: 600;
+          }
+
+          /* Damos color de fonfo al checked */
+          .item input:checked ~ span {
+            background: #03a9f4;
+            border: 1px solid #03a9f4;
+          }
+
+          /* Damos color al tilde que creamos "span::before". */
+          .item input:checked ~ span::before {
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+          }
+
+
+
+
+    </style>
+
+</head>
+<body>
+     <div class="container">
+          <h2>To Do List</h2>
+          <div class="list">
+               <div class="item">
+
+                <!-- Creamos labels que activarán cada checkboxs/Ademas un parrafo y el span que posteriormente crearemos en el la tilde. -->
+
+                    <label> 
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Programar</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Leer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Compras</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Ejercicio</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Dormir</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+          </div>
+     </div>
+</body>
+</html>
