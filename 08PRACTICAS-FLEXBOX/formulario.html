@@ -1,0 +1,313 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Seccion 9 - Practicas FlexBox
+
+1. Menú lateral con tooltip
+2. App de lista de actividades
+3. Cards personales
+4. Galeria de cards con efecto hover
+5. Formulario de contacto con label flotante PARTE I
+6. Formulario de contacto con label flotante PARTE II
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario</title>
+     <link rel="stylesheet" href="fontawesome/css/all.css">
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #112d42;
+          }
+
+          section::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: #03a9f4;
+          }
+
+          .container {
+            position: relative;
+            width: 1100px;
+            height: 550px;
+            z-index: 1;
+            display: flex;
+            /* background: #fff; */
+            /* background: #000; */
+          }
+
+          h2 {
+            font-size: 24px;
+            font-weight: 600;
+          }
+          
+          /* INFO */
+
+          .info {
+            position: absolute;
+            top: 40px;
+            width: 350px;
+            height: calc(100% - 80px);
+            background: #0f3959;
+            z-index: 1;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.5);
+          }
+
+          .info h2 {
+            color: #fff;
+          }
+
+          .info-text {
+            margin: 20px 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .item {
+            display: flex;
+            cursor: pointer;
+          }
+
+          .item span {
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          .item:hover span {
+            color: rgba(255, 255, 255, 1);
+          }
+
+          .item span:nth-child(1) {
+            width: 25px;
+            font-size: 30px;
+            margin-right: 25px;
+          }
+
+          .sociales {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .sociales a {
+            text-decoration: none;
+            font-size: 25px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          .sociales a:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+
+          /* FORM */
+
+          .form {
+               position: absolute;
+               width: calc(100% - 200px);
+               height: 100%;
+               background: #fff;
+               margin-left: 150px;
+               padding: 70px 50px 70px 250px; /* Con el padding ubicamos el contenido en el centro para que no tape el otro form */
+               box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          }
+
+          .form h2 {
+               color: #0f3959;
+          }
+
+          .form-box {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               padding-top: 30px;
+          }
+
+          .input-box {
+               position: relative;
+               margin-bottom: 35px;
+          }
+
+          .input-box.w50 {
+               width: 48%;
+          }
+
+          .input-box.w100 {
+               width: 100%;
+          }
+
+          .input-box input, 
+          .input-box textarea {
+
+               width: 100%;
+               padding: 5px 0;
+               font-size: 18px;
+               color: #333;
+               border: none; /* Quita el borde antes del click */
+               border-bottom: 1px solid #777;
+               outline: none; /* Quita el borde el input al tocarlo */
+               resize: none; /* Quitamos la posibilidad que el textarea cambie de tamaño */
+          }
+
+          .input-box textarea {
+               min-height: 120px; /* Se veia chiquito, asique agrandamos el textarea agregandole un min-height */
+          }
+
+          .input-box span {
+
+               /* Ubicamos los span dentro de los inputs */
+               position: absolute; 
+               left: 0;
+               padding: 5px 0;
+               font-size: 16px;
+               letter-spacing: 1px;
+               color: #888;
+               transition: all .5s;
+
+               pointer-events: none;
+               /* Permite indicar que si se le da click a este elemento no lo tiene en cuenta. Esto sirve para que cuando tocamos en el span no lo tome y si el del imput y nos habilite su llenado y no que quede trabado/sin activarse. */
+          }
+
+
+          .input-box input:focus ~ span,
+          .input-box input:valid ~ span,
+          .input-box textarea:focus ~ span,
+          .input-box textarea:valid ~ span {
+
+               /* Hacemos que el span suba; con menor tamaño y cambie de color. Se realiza indicando que mientras el input tenga focus(este seleccionado) aplique estas propiedades, asi tambien cuando tiene valores cargados en input (valid). */
+               transform: translateY(-20px);
+               font-size: 14px;
+               font-weight: 400;
+               letter-spacing: 1px;
+               color: #03a9f4;
+
+          }
+
+          .input-box.btn {
+               display: flex;
+               justify-content: flex-end;
+          }
+
+          .input-box input[type="submit"] {
+               cursor: pointer;
+               background: #0f3959;
+               text-transform: uppercase;
+               font-size: 14px;
+               font-weight: 600;
+               letter-spacing: 2px;
+               color: #fff;
+               border: none;
+               width: 30%;
+               padding: 12px;
+               transition: all .5s;
+          }
+
+          .input-box input[type="submit"]:hover {
+               background: #03a9f4;
+          }
+
+     </style>
+
+
+
+</head>
+<body>
+     <section>
+          <div class="container">
+               
+               <!-- Info -->
+               <div class="info">
+                    <div class="content">
+                         <h2>Información de contacto</h2>
+                         
+                         <div class="info-text">
+                              <div class="item">
+                                   <span class="fas fa-map-marker-alt"></span>
+                                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque neque.</span>
+                              </div>
+
+                              <div class="item">
+                                   <span class="fas fa-envelope"></span>
+                                   <span>loremimpsum@gmail.com</span>
+                              </div>
+
+                              <div class="item">
+                                   <span class="fas fa-phone"></span>
+                                   <span>+00 123 456</span>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="sociales">
+                         <a href=""><span class="fab fa-facebook-f"></span></a>
+                         <a href=""><span class="fab fa-twitter"></span></a>
+                         <a href=""><span class="fab fa-instagram"></span></a>
+                         <a href=""><span class="fab fa-youtube"></span></a>
+                         <a href=""><span class="fab fa-google"></span></a>
+                    </div>
+               </div>
+               
+               
+               <!-- Form -->
+               <div class="form">
+
+                    <h2>Comunicate con nosotros</h2>
+
+                    <div class="form-box">
+                         <div class="input-box w50">
+                              <input type="text" required>
+                              <span>Nombre</span>
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required>
+                              <span>Apellido</span>
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required>
+                              <span>Email</span>
+                         </div>
+
+                         <div class="input-box w50">
+                              <input type="text" required>
+                              <span>Telefono</span>
+                         </div>
+
+                         <div class="input-box w100">
+                              <textarea required></textarea>
+                              <span>Escribe tu mensaje...</span>
+                         </div>
+
+                         <div class="input-box w100 btn">
+                              <input type="submit" value="Enviar">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+</body>
+</html>
