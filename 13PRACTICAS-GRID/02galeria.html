@@ -1,0 +1,114 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Tema: Seccion 14 - Practicas Grid
+
+1. Cards de información
+2. Galería de imágenes con efecto hover
+3. Herramientas Google desplegadas en estructura Masonry
+4. Testimonios de usuarios
+5. Footer de información
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Galeria</title>
+
+     <!-- -Creamos una galeria de imagenes que al darle hover a una de ellas, las demas se vuelven opacas, resaltando la foto seleccionada. -->
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body{
+               display: grid;
+               place-items: center;
+               height: 100vh;
+               background: #000;
+          }
+
+          .grid-container {
+            width: 100%;
+            padding: 5px;
+            display: grid;
+            gap: 5px;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 210px);
+          }
+
+          .item {
+            transition: all .3s;
+          }
+
+          /* Agregamos opacidad a todos los item (fotos) */
+          .grid-container:hover .item {
+            opacity: 0.2;
+          }
+
+          /* Ahora indicamos que al hacer hover devuelva la opacidad. Sucederá que no va a aplicar porque va a prevalecer la intruccion anterior, para ello mediante !important hacemos que aplique y tome "prioridad". */
+          .item:hover {
+            opacity: 1 !important;
+          }
+
+          .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          /* -En vez de darle individualmente tamaños distintos a cada foto expandiendo en row/column para cada una, creamos clases y le asignamos esas clases a cada item directamente. */
+
+          .r-span2 {
+            grid-row: span 2;
+          }
+
+          .c-span2 {
+            grid-column: span 2;
+          }
+
+
+
+     </style>
+
+
+</head>
+<body>
+     <div class="grid-container">
+          <div class="item r-span2">
+               <img src="img/bg1.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg2.jpg" alt="">
+          </div>
+
+          <div class="item r-span2">
+               <img src="img/bg3.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg4.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg5.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg6.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg7.jpg" alt="">
+          </div>
+     </div>
+</body>
+</html>
