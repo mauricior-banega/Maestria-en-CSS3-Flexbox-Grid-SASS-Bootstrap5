@@ -1,0 +1,75 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Tema: Seccion 13 - CSS Grid ( Estructuras Avanzadas)
+
+1. Introducción a CSS Grid Layout
+2. Fundamentos
+3. Funciones
+4. Posicionamiento de elementos
+5. Grid Areas
+6. Alineación de elementos
+7. Alineación multilinea
+8. CSS TRICK ¿Cómo centrar un DIV PARTE III
+9. Orden de elementos
+10. Grid implícita y explicita
+11. Auto-fit y Auto-fill
+12. Sub grid
+13. PRACTICA Jugamos y aprendemos con Grid Garden
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Funciones - Grid</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .grid{
+               /* -Es posible crear filas/columnas asi repetitivamente, es valido pero si creciera en cantidad, es decir tuvieramos que crear 30 rilas y 50 columnas en vez de codificar cada una que seria muy largo, usamos las funciones "repeat". */
+
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+               grid-template-rows: 200px 200px 200px 200px;
+               gap: 20px;
+
+
+               /* FUNCION REPEAT: Indicando la cantidad y la fracción de filas/columnas a repetir, simplificando código. */
+               grid-template-columns: repeat(3, 1fr);
+
+               /* -Si quisieramos adicionar una columnas mas:
+
+                    grid-template-columns: repeat(3, 1fr) 2fr; 
+               */
+
+
+               grid-template-rows: repeat(4, 200px);
+
+               /* FUNCION MINMAX: Establecemos valores maximos y minimos para casos donde se achique o crezca la pantalla, idnciando mediante minmax y dentro de los paréntesis el valor minimio y máximo en este caso de columnas.
+               */
+               
+               grid-template-columns: minmax(300px, 800px) 1fr 1fr;
+          }
+
+     </style>
+
+</head>
+<body>
+	<div class="grid">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>	
+	</div>
+</body>
+</html>

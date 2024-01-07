@@ -1,0 +1,104 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Tema: Seccion 13 - CSS Grid ( Estructuras Avanzadas)
+
+1. Introducción a CSS Grid Layout
+2. Fundamentos
+3. Funciones
+4. Posicionamiento de elementos
+5. Grid Areas
+6. Alineación de elementos
+7. Alineación multilinea
+8. CSS TRICK ¿Cómo centrar un DIV PARTE III
+9. Orden de elementos
+10. Grid implícita y explicita
+11. Auto-fit y Auto-fill
+12. Sub grid
+13. PRACTICA Jugamos y aprendemos con Grid Garden
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Posicionamiento - Grid</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+
+          /* Aclaracion: Sabemos que mediante el Inspector de código podemos visualizar el HTML y CSS de nuestra aplicacion. Pero usando GRID podemos configurar desde Layout, activando div.grid el color, y elementos grid que nos serviran para el diseño del mismo. 
+          
+          Ademas podemos posicionar los elementos en lugares distintos a los creados de acuerdo a los parametros que le indiquemos; por ejemplo, el elemento de clase ".item" (1° elemento, ver en web) tiene un inicio de:
+          
+          .item {
+             grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 1;
+              grid-row-end: 2;
+          }
+
+          Pero lo cambiaremos en los siguientes codigos de mas abajo.
+          */
+
+          .grid{
+               display: grid;
+               grid-template-columns: repeat(4, 1fr);
+               grid-template-rows: repeat(3, 1fr);
+               gap: 20px;
+          }
+
+          .grid .item{
+              background-color: violet; 
+
+              /* POSICIONAR ELEMENTOS */
+              grid-column-start: 1;
+              grid-column-end: -1;
+              grid-row-start: 2;
+              grid-row-end: 3;
+
+
+              /* ATAJO 1: Valores de start y end (recomendado)*/
+              grid-column: 1 / -1;
+              grid-row: 3 / 4;
+
+
+
+              /* ATAJO 2 : No es recomendado, porque puede crear confusion al usarlo.
+
+               -Primer parametro row start
+		     -Segundo parametro column start
+		     -Tercer parametro row end
+		     -Cuarto parametro column end
+              */
+              grid-area: 3 / 2 / 5 / -1;
+              
+
+
+              /* ATAJO 3: EXPANDIR COLUMNAS Y FILAS */
+              grid-column: span 3;
+              grid-row: span 3;            
+          }
+
+     </style>
+
+</head>
+<body>
+	<div class="grid">
+		<div class="item">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>	
+	</div>
+</body>
+</html>
