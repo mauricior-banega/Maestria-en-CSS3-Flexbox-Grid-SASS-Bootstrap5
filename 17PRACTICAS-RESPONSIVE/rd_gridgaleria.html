@@ -1,0 +1,140 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Tema: Seccion 18 - Practicas responsive design
+
+1. Galería de imágenes responsive
+2. Cards con efecto hover responsive
+3. Aplicando responsive a nuestra galería Grid
+4. Aplicando responsive a nuestras app Google con Masonry Layout
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Grid Galeria</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body{
+               display: grid;
+               place-items: center;
+               height: 100vh;
+               background: #000;
+          }
+
+
+          .grid-container{
+               width: 100%;
+               padding: 5px;
+               display: grid;
+               gap: 5px;
+               
+               grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+               /* -Para aplicar responsive en grid es necesario usar auto-fill o auto-fit, para darme un tamaño min o max a columnas o filas y en base a ello que cree la cantidad de ellas que entren dependiendo del contenedor.
+
+                    Antes: grid-template-columns:repeat(4, 1fr);
+
+                -En este caso, creabamos 4 columnas de 1fr, pero para que sea dinamico y responsivo es que lo creamos con auto-fill (acompla los elementos al contenedor), asignando un tamaño maximo de columna de 300px, 1fr.
+                    
+                */
+
+               grid-template-rows: repeat(3, 210px);
+
+               grid-auto-rows: 210px; /* -Asignamos px a las filas que se crean por defecto tambien, es decir a las demas filas que se crean solas, cosa que sucede en este caso ya que establecimos 3 filas nomas y en la web se ven 5. */
+
+               grid-auto-flow: dense; /* -Esta propiedad viene a solucionar esto de que queden estacios vacios en el grid, osea que tenga fotos todo el grid. */
+
+          }
+
+          .item{
+               transition: all .3s;
+          }
+
+          .grid-container:hover .item{
+               opacity: 0.2;
+          }
+
+          .item:hover{
+               opacity: 1 !important;
+          }
+
+
+          .item img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+
+          .r-span2{
+               grid-row: span 2;
+          }
+
+          .c-span2{
+               grid-column: span 2;
+          }
+
+
+          /* MEDIA QUERY */
+          @media screen and (min-width: 1530px) {
+               .grid-container{
+                    grid-template-rows: auto;
+               }
+               
+               .item:nth-child(6),
+               .item:nth-child(7){
+                    grid-column: auto !important;
+               }
+          }
+
+
+          @media screen and (max-width: 1224px) and (min-width: 920px) {
+               .item:nth-child(7){
+                    grid-column: auto !important;
+                    grid-row: span 2 !important;
+               }
+          }
+     </style>
+
+
+</head>
+<body>
+     <div class="grid-container">
+          <div class="item r-span2">
+               <img src="img/bg1.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg2.jpg" alt="">
+          </div>
+
+          <div class="item r-span2">
+               <img src="img/bg3.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg4.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg5.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg6.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg7.jpg" alt="">
+          </div>
+     </div>
+</body>
+</html>
