@@ -1,0 +1,88 @@
+<!-- Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+    
+   Tema: Seccion 17 - Responsive Design
+
+1. Introducción al Responsive Design
+2. Viewport
+3. Unidades de medidas responsive
+4. Media querys
+5. Media query scheme para aplicar modo oscuro
+6. PRACTICA Trabajando con el Responsive Design
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Media Query 2</title>
+
+     <style>
+          :root{
+               --dark: #222;
+               --ligth: #DEDEDE;
+
+               --background: var(--dark);
+               --font-text: var(--ligth);
+          }
+          
+          body{
+               background-color: var(--background);
+               color: var(--font-text);
+               font-size: 40px;
+          }
+
+          .container{
+               padding: 20px;
+          }
+
+
+          div.img{
+               width: 200px;
+               height: 200px;
+               border-radius: 50%;
+               background: url(img/sun.jpg);
+               background-size: cover !important;
+               background-position: center !important;
+          }
+
+          /* MEDIA QUERY SCHEME */
+          /* -lo que realizará este mediaquery no es leer el tamaño del dispositivo que lo ejecuta, sino que tema tiene activado, si modo oscuro o luz. */
+
+          @media (prefers-color-scheme: dark){
+               :root{
+                    --background: var(--dark);
+                    --font-text: var(--ligth);
+               }
+
+               div.img{
+                    background: url(img/moon.jpg);
+               }
+          }
+
+          @media (prefers-color-scheme: light){
+               :root{
+                    --background: var(--light);
+                    --font-text: var(--dark);
+               }
+          }
+          
+
+
+     </style>
+
+
+
+</head>
+<body>
+     <div class="container">
+          <div class="img"></div>
+          <h1>Hola mundo</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illo quibusdam. Sunt earum sint quaerat harum molestias quis, voluptas modi maxime ipsum dolorum rem neque. Distinctio corporis nisi minima facilis.</p>
+     
+     </div>
+
+
+</body>
+</html>
