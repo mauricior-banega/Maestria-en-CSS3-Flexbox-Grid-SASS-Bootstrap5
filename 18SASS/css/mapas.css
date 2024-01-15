@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* Curso: Maestría en CSS3 Flexbox, Grid, SASS, Bootstrap 5 [Udemy] 
+
+   Tema: Seccion 19 - SASS ( CSS con superpoderes)
+
+1. Introducción a SASS
+2. Instalación de SASS; método profesional
+3. Instalación de SASS; Extensión Watch Sass
+4. Sintaxis básica
+5. Operaciones
+6. Mixin
+7. Listas
+8. Mapas (solo archivo SASS)
+9. Módulos
+10. Extends
+11. Condicionales
+12. Bucles
+13. Media query con SASS */
+h1 {
+  font-size: 40px;
+  color: red;
+}
+
+h1 {
+  font-size: 40px;
+  color: green;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+/* Tambien podemos eliminar elementos de una lista, como podemos ver si llamamos a h1/h2/h3 que han sido eliminados en el CSS veremos que no aplica los pixeles correspondientes. Pero si a h4 que no fue removido. */
+
+/*# sourceMappingURL=mapas.css.map */

@@ -1,0 +1,86 @@
+/* VARIABLES */
+
+$colorFondo: #ccc; /* En CSS era root: {--colorFondo:#ccc;} */
+$colorPrincipal: crimson;
+
+/* Aclaramos que si bien SASS podemos definir variables, en CSS no se verán, solamente traerá elñ valor directamente de ellas. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+    /* En CSS llamabamos a la variable ej: background: var(--nombreDeVariable); */
+    background: $colorFondo; /* Ahora llamamos de esta forma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.articulo {
+     width: 500px;
+     height: 400px;
+     background: #FFF;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     border: 2px solid $colorPrincipal;
+     transition: all .5s;
+
+            .titulo {
+
+                color: $colorPrincipal;
+
+                /* -En SASS para evitar la repeticion de código, se usa declarar una sola vez la palabra sin repetir con : y entre {} la propiedad + valor.
+                font-size: ;
+                font-weight: ;
+                font-style: ; */
+
+                        font: {
+                            size: 35px;
+                            weight: 500;
+                            style: italic;
+                        }
+
+                        /* Sino evitamos la repeticion funcionará igual, pero no haremos de nuestro codigo uno optimo. ERmplificamos con los "text.
+                        text-align: ;
+                        text-transform: ;
+                        text-shadow: ;
+                        */
+
+                        text: {
+                            align: center;
+                            transform: uppercase;
+                            shadow: 0 0 5px rgba(#000000, .5);
+                            /* Para aplicar valores rgba() ahora en SASS podemos declarar de la sgte forma para darle transparencia al negro y no como antes; quedando en CSS:
+                                                                text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                            */
+                        }
+            }
+
+            p {
+                line-height: 20px;
+                font-size: 18px;
+                text-align: justify;
+                margin: 10px 0;   
+              }
+
+            &:hover { /* De esta manera se declara el hover para articulos; antes en CSS era .articulos:hover ahora es mediante &:hover donde hace referencia al elemento ".articulo" */
+
+                background: $colorPrincipal;
+                color:  #FFF;
+                box-shadow: 0 0 15px 5px rgba($colorPrincipal, 0.5);
+      
+      
+                .titulo {
+                     color: #FFF;
+                }
+           }
+}
+

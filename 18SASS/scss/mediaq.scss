@@ -1,0 +1,121 @@
+/*
+Media Querys como se aplica desde CSS
+
+p {
+     font-size: 80px;
+     color: lightseagreen;
+}
+
+@media screen and (max-width: 900px) {
+     p{
+          font-size: 60px;
+          color: crimson;
+     }
+}
+
+@media screen and (max-width: 700px) {
+     p{
+          font-size: 40px;
+          color: greenyellow;
+     }
+}
+
+@media screen and (max-width: 400px) {
+     p{
+          font-size: 20px;
+          color: #000;
+     }
+
+}*/
+
+
+//EN SASS  es diferente, es mejor. Se realiza de la sgte forma:
+
+/* 
+NO FUNCIONA
+
+$desktop: (max-width: 1024px);
+$tablets: (max-width: 720px);
+$phones: (max-width: 480px); 
+
+*/
+
+//Ahora funciona asi, explico debajo.
+$desktop: 1024px;
+$tablets: 720px;
+$phones: 480px; 
+
+
+//Extrapolamos los valores de las variables para cada mq
+/*  @media screen and #{$desktop} {}
+
+    @media screen and  #{$tablets} {} 
+
+    @media screen and  #{$phones} {} 
+*/
+
+
+//Ahora, podemos meterlos dentro de un mixin o funciones apra poder acceder a ellos desde forma global en todo el proyecto. Recordemos que podemos crear mq en el mismo archivo sass, pero se recomendaba crear modulos en donde alli podria ir el de mq, bien tambien puede hacerse esto. Cargar en mq dentro de la declaracion de un elemento especifico.
+
+/* 
+EN EL VIDEO FUNCIONA PERO HOY NO; NO PERMITE REALIZAR LA DECLARACION DE UNA VARIABLE CON PROPIEDADES MQ, LAS MISMAS (MAX-WIDTH ETC) DEBEN DECLARADAS DENTRO DE ESTA DECLARACION Y NO EN LA DECLARACION DE LA VARIABLE
+
+@mixin desktop {
+     @media screen and #{$desktop} {
+          @content;
+     }
+}
+
+@mixin tablets {
+     @media screen and #{$tablets} {
+          @content;
+     }
+}
+
+@mixin phones {
+     @media screen and #{$phones} {
+          @content;
+     }
+} */
+
+
+@mixin desktop {
+    @media screen and (max-width: $desktop){
+         @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+         @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+         @content;
+    }
+}
+
+
+p {
+     font-size: 80px;
+     color: lightseagreen;
+
+
+     @include desktop(){
+          font-size: 60px;
+          color: crimson;
+     }
+
+     @include tablets(){
+          font-size: 40px;
+          color: greenyellow;
+     }
+
+     @include phones(){
+          font-size: 20px;
+          color: #000;
+     }
+     
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* OPERACIONES  */
+
+/* -En CSS para realizar operaciones matematicas debiamos usar el método "calc()". Ahora en SASS esto no es necesario, salvo que quedamos operar con distintas unidades, explico. */
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+.container section {
+  float: left;
+  /* -Si quiseramos que el width tenga 400px antes declarabamos: calc(200px + 200px); ahora directamente la suma de los px. Y en CSS veremos la suma hecha (width: 400px;) 
+
+  Aclaracion: No podemos operar con distintas unidades con la declaracion del operador unicamente, es decir no podemos sumar 100vh + 50px porque en SASS da error. Mas bien podremos hacer 100vh + 5vh. Pero si nos dejará usando el método calc(100vh + 50px).  */
+  /* IMPORTANTE: Para realizar calculos complejos, de espacio realizando multiplicacion/division debemos aplicar de la sgte forma. Supongamos que queremos saber el 33.33% o un section 200px, partiendo de los 600px (tamaño de contenedor en total). Para ello deberemos de aplicar: 200px / 600px * 100%; y en el CSS veremos que le aplica el width: 33,33% de esta forma calculamos el porcentaje de forma inteligente. */
+
+  width: 33.3333333333%;
+  height: 400px;
+  background: #222;
+
+  /* Tambien podemos realizar operaciones en los colores ya que estos en realidad se expresan en valores hexadecimales. Permitiendo asi generar colores de forma dinamica.
+  Ej: background: #222 * 7; o background: orangered * 2; */
+}
+.container aside {
+  float: left;
+  width: 66.6666666667%;
+  height: 400px;
+  background: orangered * 2;
+}
+
+

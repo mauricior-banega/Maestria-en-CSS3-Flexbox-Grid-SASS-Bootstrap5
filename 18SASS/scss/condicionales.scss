@@ -1,0 +1,94 @@
+/* -Básicamente son estructuras que si cumplen una condicion, de si se cumplen aplican un estilo y sino no lo aplican, misma logica IF/ELSE pero en SASS. 
+
+-En este caso creamos una variable @color que tiene definido un texto "azul", desde donde en la declaracion de estilos de h1 realiza la condicional. Si se cumple que tenga el texto azul, entonces aplicara el estilo "color: blue;". Pero sino se cumple aplicará "color: red;".
+
+*/
+
+$color: verde;
+
+h1 {
+
+    @if($color == azul) 
+    {
+        color: blue;
+    }
+    @else if ($color == verde)
+    {
+        color: green;
+    }
+    @else
+    {
+        color: red;
+    } 
+}
+
+//Ejemplificamos un h1 pero no hay tal elemento en html. Es solo apra ver los cambios que aplica desde SASS en CSS. A continuacion si crearemos ejemplos para modificar el html
+
+//EJEMPLO
+/* Lo que realizamos es aplicar los mismos estilos de box en todos los demas usando "extends" y ademas mediante mixins incluir una funcion llamada "condicional" que lo que hace es hacer llegar el color que enviamos por parametro. Pero a lo que queremos ir con el ejemplo es que de acuerdo a ese valor enviado PREGUNTAREMOS si coincide o no para aplicar un estilo distinto, que en este caso sera un "border".
+
+*/
+@mixin condicional($color) {
+    
+    background: $color;
+
+    @if($color == red) {
+        border: 5px solid #740000;
+    }
+
+    @else if($color == blue) {
+        border: 5px solid #000874;
+    }
+
+    @else if($color == orange) {
+        border: 5px solid #743400;
+    }
+
+    @else if($color == green) {
+        border: 5px solid #3af700;
+    }
+    @else {
+        border: 5px solid #000;
+    }
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.box1 {
+    @extend .box;
+    @include condicional(red);
+}
+
+
+.box2 {
+    @extend .box;
+    @include condicional(blue);
+}
+
+.box3 {
+    @extend .box;
+    @include condicional(green);
+}
+
+.box4 {
+    @extend .box;
+    @include condicional(orange);
+}
+
+.box5 {
+    @extend .box;
+    @include condicional(pink);
+}
+
+.box6 {
+    @extend .box;
+    @include condicional(indigo);
+}
+
+
+

@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/* -Bucles: Un ciclio que se repite cada vez que se cumpla cierta condicion, en SASS tenemos el FOR/WHILE/EACH */
+h1 {
+  font-size: 20em;
+}
+
+h2 {
+  font-size: 40em;
+}
+
+h3 {
+  font-size: 60em;
+}
+
+h4 {
+  font-size: 80em;
+}
+
+h5 {
+  font-size: 100em;
+}
+
+h6 {
+  font-size: 120em;
+}
+
+h6 {
+  font-size: 12em;
+}
+
+h5 {
+  font-size: 10em;
+}
+
+h4 {
+  font-size: 8em;
+}
+
+h3 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.text-azul {
+  color: #0000ff;
+}
+
+.text-rojo {
+  color: #ff1100;
+}
+
+.text-verde {
+  color: #09ff00;
+}
+
+.text-negro {
+  color: #000;
+}
+
+.text-rosa {
+  color: #ea00ff;
+}
+
+/* Lo que hará será recorrer todo el arreglo $colores y mientras este tenga como variables 2 valores "$color y $nombre" este lo recorrerá. Ahora, mientras valla haciendolo, creará una clase que llamamos .text- y que tendrá concatenado el $nombre de cada posicion creando asi una clase con distitons nombres. Ademas tomará a su vez la otra variable $color que es asignada atravez de la declaracion "color: $color;". */
+.box {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.box:nth-child(1) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(2) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(3) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(4) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(5) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(6) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(7) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(8) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(9) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(10) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(11) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(12) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(13) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(14) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(15) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(16) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(17) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(18) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(19) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+.box:nth-child(20) {
+  /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+}
+
+/*
+ACLARACION IMPORTANTE: ESTE EJEMPLO DE MULTIPLICAR COLORES YA NO FUNCIONA EN SASS.
+
+-Quizas la version con la que se hace el explicativo es otra, diferente a la mia y por eso no funcione (tengo la 1.69.7 compiled with dart2js 3.2.4). Explicacion de IA sobre la multiplicacion de colores:
+
+Puedo aclarar que en SASS, la multiplicación directa de colores no es una operación válida. SASS ofrece funciones como scale-color o adjust-color para realizar operaciones con colores, y estas funciones han estado disponibles durante un tiempo.
+
+La razón por la que estás viendo un error puede depender de la versión específica de SASS que estás utilizando o de la configuración de tu entorno de desarrollo. Asegúrate de que estás utilizando una versión de SASS que admita estas funciones.
+
+En cualquier caso, la corrección que proporcioné con adjust-color es una forma estándar de realizar operaciones con colores en SASS y debería funcionar en versiones recientes. Si encuentras problemas, verifica la documentación de SASS o la información específica de la versión que estás utilizando.
+
+*/
+
+/*# sourceMappingURL=bucles.css.map */

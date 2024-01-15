@@ -1,0 +1,86 @@
+/* -Bucles: Un ciclio que se repite cada vez que se cumpla cierta condicion, en SASS tenemos el FOR/WHILE/EACH */
+
+
+//BUCLES TEORIA
+
+
+//For : Indicamos que el ciclo de repita de 1 a 6 veces. Tendremos como variable a $i.
+
+@for $i from 1 through 6 {
+
+    //Interpolacion h#{$i}: Especie de concatenacion. A medida que corra el ciclo en $i va a colocar el valor correspondiente cada vez.
+
+    h#{$i} { 
+
+        font-size: $i * 20em;
+
+    }
+
+    //Entonces creará para para cada h1/h2../h6 un font-size de 20em/40em../120em.
+
+    //-De esta manera podemos crear de forma rapida frameworks, de hecho Boostrap, Tailwind estan hechon con SASS.
+}
+
+
+
+
+
+//While: Mientras se aplique esta condicion aplicará el ciclo.
+
+$i: 6;
+
+@while $i > 0 {
+
+    h#{$i} {
+        font-size: $i * 2em;
+    }
+
+    $i: $i - 1;
+
+}
+
+//Each: Permite buscar diferentes valores dentro de un arreglo
+
+//Arreglo $colores
+$colores: (#0000ff, azul), (#ff1100, rojo), (#09ff00, verde), (#000, negro), (#ea00ff, rosa);
+
+
+@each $color, $nombre in $colores {
+     .text-#{$nombre}{
+        color: $color;
+     }  
+}
+
+/* Lo que hará será recorrer todo el arreglo $colores y mientras este tenga como variables 2 valores "$color y $nombre" este lo recorrerá. Ahora, mientras valla haciendolo, creará una clase que llamamos .text- y que tendrá concatenado el $nombre de cada posicion creando asi una clase con distitons nombres. Ademas tomará a su vez la otra variable $color que es asignada atravez de la declaracion "color: $color;". */
+
+
+
+// EJEMPLO DE BUCLES 
+.box{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+@for $i from 1 through 20{
+    .box:nth-child(#{$i}){
+         /* background: #00061A * $i; NO FUNCIONA PARA COLORES*/
+    }
+
+}
+
+
+
+ /*
+ACLARACION IMPORTANTE: ESTE EJEMPLO DE MULTIPLICAR COLORES YA NO FUNCIONA EN SASS.
+
+-Quizas la version con la que se hace el explicativo es otra, diferente a la mia y por eso no funcione (tengo la 1.69.7 compiled with dart2js 3.2.4). Explicacion de IA sobre la multiplicacion de colores:
+
+Puedo aclarar que en SASS, la multiplicación directa de colores no es una operación válida. SASS ofrece funciones como scale-color o adjust-color para realizar operaciones con colores, y estas funciones han estado disponibles durante un tiempo.
+
+La razón por la que estás viendo un error puede depender de la versión específica de SASS que estás utilizando o de la configuración de tu entorno de desarrollo. Asegúrate de que estás utilizando una versión de SASS que admita estas funciones.
+
+En cualquier caso, la corrección que proporcioné con adjust-color es una forma estándar de realizar operaciones con colores en SASS y debería funcionar en versiones recientes. Si encuentras problemas, verifica la documentación de SASS o la información específica de la versión que estás utilizando.
+
+*/

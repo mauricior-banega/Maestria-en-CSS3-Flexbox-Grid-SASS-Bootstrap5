@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* -Extends se usa al igual que los mixins para ahorrarnos codigo y que este no sea repetitivo. En este práctico vemos 3 contenedores con las mismas propiedades CSS pero cambian unicamente el color de background. Para que esto no suceda, aplicamos extends.
+
+-Esto se hace mediante "@extends .contenedor", por ejemplo. De esta manera aplica las mismas propiedades a todos los demas contenedores.
+
+-Podremos ver en el CSS que muestra las clases compartidas, separadas por ",".
+
+*/
+.contenedor, .contenedor-green, .contenedor-blue, .contenedor-red {
+  display: inline-block;
+  width: 300px;
+  border: 1px solid #000;
+  padding: 40px;
+  margin: 10px;
+}
+
+.contenedor-red {
+  background: crimson;
+}
+
+.contenedor-blue {
+  background: lightblue;
+}
+
+.contenedor-green {
+  background: lightgreen;
+}
+
+/*# sourceMappingURL=extends.css.map */

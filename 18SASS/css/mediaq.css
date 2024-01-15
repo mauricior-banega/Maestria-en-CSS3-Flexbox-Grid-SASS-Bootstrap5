@@ -1,0 +1,87 @@
+/*
+Media Querys como se aplica desde CSS
+
+p {
+     font-size: 80px;
+     color: lightseagreen;
+}
+
+@media screen and (max-width: 900px) {
+     p{
+          font-size: 60px;
+          color: crimson;
+     }
+}
+
+@media screen and (max-width: 700px) {
+     p{
+          font-size: 40px;
+          color: greenyellow;
+     }
+}
+
+@media screen and (max-width: 400px) {
+     p{
+          font-size: 20px;
+          color: #000;
+     }
+
+}*/
+/* 
+NO FUNCIONA
+
+$desktop: (max-width: 1024px);
+$tablets: (max-width: 720px);
+$phones: (max-width: 480px); 
+
+*/
+/*  @media screen and 1024px {}
+
+    @media screen and  720px {} 
+
+    @media screen and  480px {} 
+*/
+/* 
+EN EL VIDEO FUNCIONA PERO HOY NO; NO PERMITE REALIZAR LA DECLARACION DE UNA VARIABLE CON PROPIEDADES MQ, LAS MISMAS (MAX-WIDTH ETC) DEBEN DECLARADAS DENTRO DE ESTA DECLARACION Y NO EN LA DECLARACION DE LA VARIABLE
+
+@mixin desktop {
+     @media screen and 1024px {
+          @content;
+     }
+}
+
+@mixin tablets {
+     @media screen and 720px {
+          @content;
+     }
+}
+
+@mixin phones {
+     @media screen and 480px {
+          @content;
+     }
+} */
+p {
+  font-size: 80px;
+  color: lightseagreen;
+}
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 60px;
+    color: crimson;
+  }
+}
+@media screen and (max-width: 720px) {
+  p {
+    font-size: 40px;
+    color: greenyellow;
+  }
+}
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 20px;
+    color: #000;
+  }
+}
+
+/*# sourceMappingURL=mediaq.css.map */

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* Listas es en un Arreglo */
+/* -Creamos una variable que no tiene un unico valor, sino varios en la misma declaracion. Esto entonces es un arreglo, depende de la posicion podremos llamar a uno u otro color/valor. */
+h1 {
+  color: yellow;
+}
+
+/* Combinar listas: Podemos combinar colores con colores2
+-Para hacerlo usamos la funcion "join" y especificamos ambas listas y el separador que en este caso será una comma (,). Esta union estará en la lista $coloresTotales. */
+h1 {
+  color: indigo;
+}
+
+/* Entonces veremos que ahora el h1 tiene color indigo (posicion 7 del nuevo arreglo). */
+h1 {
+  color: black;
+}
+
+/*# sourceMappingURL=listas.css.map */

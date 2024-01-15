@@ -1,0 +1,34 @@
+/* Listas es en un Arreglo */
+
+/* -Creamos una variable que no tiene un unico valor, sino varios en la misma declaracion. Esto entonces es un arreglo, depende de la posicion podremos llamar a uno u otro color/valor. */
+
+$colores: blue, red, green,yellow, orange, pink;
+
+$colores2: indigo, black, white;
+
+//Acceder a un elemento de una lista. Usamos nth
+
+h1 {
+    color: nth($colores, 4);
+}
+
+/* Combinar listas: Podemos combinar colores con colores2
+-Para hacerlo usamos la funcion "join" y especificamos ambas listas y el separador que en este caso será una comma (,). Esta union estará en la lista $coloresTotales. */
+
+$coloresTotales: join($colores , $colores2, comma);
+
+h1 {
+    color: nth($coloresTotales, 7);
+}
+
+/* Entonces veremos que ahora el h1 tiene color indigo (posicion 7 del nuevo arreglo). */
+
+
+//Agregar elementos a mis arreglos o listas: Usando "append" agregamos un nuevo valor a una lista, donde pasará a llamarse $agregarElemento y tendrá los valores de $colores + nuevo valor.
+
+$agregarElemento: append($colores, black, comma);
+//$colores: blue, red, green,yellow, orange, pink, black;
+
+h1 {
+    color: nth($agregarElemento, 7);
+}

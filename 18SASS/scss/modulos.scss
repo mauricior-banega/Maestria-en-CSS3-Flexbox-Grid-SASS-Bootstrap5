@@ -1,0 +1,13 @@
+/* En SASS se utiliza crear los estilos de acuerdo a las secciones de nuestra web pero en diferentes archivos, de manera que queden organizados de forma independiente cada uno. Es decir, un archivo que sea de estilos generales, otro para el header, otro para las secciones, footer etc.
+
+-Cada uno de estos comenzará con un guion bajo en el comienzo del nombre, esto se utiliza para que sass no cree (indexe) un archivo css "aparte", sino mas bien que tome todos esos archivos y cree un único archivo css con todos los modulos. Podemos administrarlo desde la misma carpeta de sass o aparte de ella. Veremos a continuacion como realizarlo
+
+*/
+
+@import "generales"; //Pasamos el nombre sin guion bajo
+@import "nav";
+@import "header";
+@import "principal";
+@import "footer";
+@import "mediaq";
+

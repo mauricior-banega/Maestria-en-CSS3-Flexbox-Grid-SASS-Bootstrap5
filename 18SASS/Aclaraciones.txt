@@ -1,0 +1,36 @@
+
+PASOS
+-En el práctico nos indica como instalar Node JS y NPM en PC cosa que ya lo tenia realizado.
+
+-Luego antes de instalar Node JS y NPM en "nuestro proyecto" creamos la carpeta css y scss e index manualmente para poder trabajar con ellos mas adelante.
+
+-Ahora, procedemos a instalar como dijimos esos 2 componentes pero en nuestro proyecto. Pero tener en cuenta que en el práctico, crea una carpeta raíz, por lo que indica que atravez de VSC se abra la terminal para ejecutar los comandos (Terminal/Nueva Terminal) pero esta nos ubica en "Estudios" y NO en donde trabajaremos que será "12SASS". Para ello damos click derecho en "18SASS" y ejecutamos "Abrir en terminal integrado", para comenzar a instalar. La ruta entonces quedará (PS E:\Programacion\XAMPP\htdocs\Estudios\Cursos Propios\Maestría-en-CSS3-Flexbox-Grid-SASS-Bootstrap5\Maestria-en-CSS3-Flexbox-Grid-SASS-Bootstrap5\18SASS>)
+
+-En la ruta especificada ejecutamos: npm init -y   ----> (creará el archivo package.json en el proyecto).
+-Luego instalamos SASS (codigo indicado en la web): npm install -g sass
+-Y con eso listo, ya estará correctamente instalado. Recordar que para todos nuestros proyectos que deseemos usas SASS debemos de realizar estos pasos indicados siempre.
+
+-Aclaracion para limpiar el codigo de pantalla: clear
+
+------------------------------------------------------
+
+-Creamos estilo para ejemplificar en el archivo estilos.scss; donde por otro lado el otro archivo creado estilos.css esta vacio.
+-Pero que ejecutando el pre-procesamiento de SASS creará que "estilos.css" sea codificado apartir de el.
+-Esto lo realizamos ejecutando: sass scss:css
+-Podremos observar se "estilos.css" se codifica y se crea en la carpeta css, un archivo nuevo "estilos.css.map".
+
+-Pero ante cada cambio tendremos que escribir sass scss:css? No, podemos ejecutar el sgte comando para verifique cambios en el archivo "estilos.scss" asi: sass --watch scss:css
+
+-Al ejecutar esto, el programa observará cualquier cambio apra ser aplicado en el css automaticamente, ademas nos indica que para detener esta observacion deveremos de ejecutar CTL+C (Sass is watching for changes. Press Ctrl-C to stop.)
+
+------------------------------------------------------
+
+Aplicacion para usar SASS
+-Esta es otra manera de trabajar con SASS, y es por medio de una aplicaciones como indica la pagina oficial. Nosotros usaremos una extension de VSC llamada "Live Sass".
+-Una vez instalado, podremos ver que en el VSC debajo a la derecha veremos que aparece "Watch Sass" y desde ahi prendemos para que funcione y observe y si tocamos de nuevo deja de observar, se detiene.
+-Sucede que al usar la extension no modifica el estilos.css de la carpeta css, sino que crea un estilos.css dentro de la carpeta scss cosa que no deberia suceder. De igual manera puede usarse y trabajar correctamente.
+-Luego de verificar, hay que modificar el PATH de la extension (pasos en esta web). Y especificar la ruta a donde se guardaran los css generados, que en este caso será en E:\Programacion\XAMPP\htdocs\Estudios\Cursos Propios\Maestría-en-CSS3-Flexbox-Grid-SASS-Bootstrap5\Maestria-en-CSS3-Flexbox-Grid-SASS-Bootstrap5\18SASS\css
+-Esto de modificar la ruta no funciono ya que tengo espacios en las carpetas y el JSON no los toma y pide renombrar carpetas y puede generar conflictos mayores, por eso lo dejo asi. Usaré los comandos como lo venia haciendoa antes.
+
+
+

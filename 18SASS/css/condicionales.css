@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* -Básicamente son estructuras que si cumplen una condicion, de si se cumplen aplican un estilo y sino no lo aplican, misma logica IF/ELSE pero en SASS. 
+
+-En este caso creamos una variable @color que tiene definido un texto "azul", desde donde en la declaracion de estilos de h1 realiza la condicional. Si se cumple que tenga el texto azul, entonces aplicara el estilo "color: blue;". Pero sino se cumple aplicará "color: red;".
+
+*/
+h1 {
+  color: green;
+}
+
+/* Lo que realizamos es aplicar los mismos estilos de box en todos los demas usando "extends" y ademas mediante mixins incluir una funcion llamada "condicional" que lo que hace es hacer llegar el color que enviamos por parametro. Pero a lo que queremos ir con el ejemplo es que de acuerdo a ese valor enviado PREGUNTAREMOS si coincide o no para aplicar un estilo distinto, que en este caso sera un "border".
+
+*/
+.box, .box6, .box5, .box4, .box3, .box2, .box1 {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.box1 {
+  background: red;
+  border: 5px solid #740000;
+}
+
+.box2 {
+  background: blue;
+  border: 5px solid #000874;
+}
+
+.box3 {
+  background: green;
+  border: 5px solid #3af700;
+}
+
+.box4 {
+  background: orange;
+  border: 5px solid #743400;
+}
+
+.box5 {
+  background: pink;
+  border: 5px solid #000;
+}
+
+.box6 {
+  background: indigo;
+  border: 5px solid #000;
+}
+
+/*# sourceMappingURL=condicionales.css.map */
